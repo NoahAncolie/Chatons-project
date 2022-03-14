@@ -37,13 +37,11 @@ ActiveRecord::Schema.define(version: 2022_03_14_183613) do
   end
 
   create_table "carts", force: :cascade do |t|
-    t.integer "quantity"
-    t.boolean "in_cart"
-    t.bigint "item_id"
+    t.integer "total_price"
+    t.integer "nb_of_items"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["item_id"], name: "index_carts_on_item_id"
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
@@ -66,8 +64,9 @@ ActiveRecord::Schema.define(version: 2022_03_14_183613) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "quantity"
-    t.integer "total_price"
+    t.boolean "achieved"
+    t.boolean "abandoned"
+    t.boolean "in_cart?"
     t.bigint "item_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
