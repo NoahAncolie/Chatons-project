@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+images_link = [ mettre les liens des images ici ]
+
+5.times do |i|
+    item = Item.new
+    item.picture.attach(images_link[i])
+    item.name = "Photo de chat"
+    item.price = "£100"
+    item.save
+end
