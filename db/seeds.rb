@@ -12,6 +12,7 @@ images_link = [ mettre les liens des images ici ]
     item = Item.new
     item.picture.attach(images_link[i])
     item.name = "Photo de chat"
-    item.price = "£100"
+    item.price = 100
+    item.quantity = 3
     item.save
 end
