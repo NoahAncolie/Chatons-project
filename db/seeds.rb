@@ -8,7 +8,8 @@
 
 5.times do |i|
     item = Item.new
-    item.picture.attach("https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554__340.jpg")
+    download = URI.open("https://resize3.prod.docfr.doc-media.fr/rcrop/1200,902,center-middle/img/var/doctissimo/storage/images/fr/www/animaux/chat/choisir-chat/age-d-adoption-du-chaton/722163-2-fre-FR/age-d-adoption-du-chaton.jpg")
+    item.picture.attach(io: download, filenema: "cat.jpg")
     item.name = "Photo de chat"
     item.price = 100
     item.quantity = 3

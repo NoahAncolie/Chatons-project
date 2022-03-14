@@ -9,6 +9,13 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(permit_params)
+    @item.picture.attach(params[:cat_picture])
+    if @item.save
+      redirect_to items_path
+    else
+      flash.now[:errors] = "There were those errors : "
+      render new_item_path
+    end
   end
 
   def destroy
@@ -25,6 +32,6 @@ class ItemsController < ApplicationController
   private
 
   def permit_params
-  
+    params.permit(:name, :price)
   end
 end
