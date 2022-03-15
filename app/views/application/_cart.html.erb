@@ -4,7 +4,10 @@
     </div>
     <div class="cart-elements">
         <% @cart.each do |item| %>
-            <p><%= Item.find(item.item_id).name %></p>
+            <a href="<%= item_path(item.item_id) %>"><%= Item.find(item.item_id).name %><br>quantity : <%= item.quantity %><br>price : <%= item.price %></a>
         <% end %>
+        <div class="bottom-payment">
+            <%= link_to "Acheter", "/paiement/new" %>
+        </div>
     </div>
 </div>
