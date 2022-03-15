@@ -1667,3 +1667,1017 @@ Processing by CartsController#show as JS
 Completed 200 OK in 44ms (Views: 8.1ms | ActiveRecord: 5.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2022-03-15 16:27:35 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (20.1ms)
+Completed 200 OK in 289ms (Views: 278.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:27:37 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (72.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (5.1ms)
+Completed 200 OK in 125ms (Views: 102.9ms | ActiveRecord: 17.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:27:37 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (318.0ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzI6MzcuNTY2WiIsInB1ciI6ImJsb2Jfa2V5In19--7eb01a1dd8359e4e68020e2db4bf9d6b34ad4fa9/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzI6MzcuNTY2WiIsInB1ciI6ImJsb2Jfa2V5In19--7eb01a1dd8359e4e68020e2db4bf9d6b34ad4fa9/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 326ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzI6MzcuNTY2WiIsInB1ciI6ImJsb2Jfa2V5In19--7eb01a1dd8359e4e68020e2db4bf9d6b34ad4fa9/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:27:37 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzI6MzcuNTY2WiIsInB1ciI6ImJsb2Jfa2V5In19--7eb01a1dd8359e4e68020e2db4bf9d6b34ad4fa9", "filename"=>"cutecat"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/chat/1/orders" for 127.0.0.1 at 2022-03-15 16:27:39 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"kTGeKDIfVPHGa/sDD63AlXr52J21Atve+ZGSLpihtzfFLG/qTWrdYiaOOIxvotql/VCKANsfCl8kAz85uSi9sw==", "item_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 4.0ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user_id' for Order.):
+  
+app/controllers/orders_controller.rb:9:in `create'
+Started POST "/chat/1/orders" for 127.0.0.1 at 2022-03-15 16:28:46 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"kTGeKDIfVPHGa/sDD63AlXr52J21Atve+ZGSLpihtzfFLG/qTWrdYiaOOIxvotql/VCKANsfCl8kAz85uSi9sw==", "item_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 35ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-15 16:28:46 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (3.0ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:28:50 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.9ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  Rendering carts/show.js.erb
+  Rendered application/_cart.html.erb (0.7ms)
+  Rendered carts/show.js.erb (3.3ms)
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:28:53 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (70.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (3.1ms)
+Completed 200 OK in 113ms (Views: 87.7ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:28:53 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzM6NTMuMjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--ffaf220bdb366bb155fd4c437d29862dcdab10ee/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzM6NTMuMjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--ffaf220bdb366bb155fd4c437d29862dcdab10ee/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 9ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzM6NTMuMjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--ffaf220bdb366bb155fd4c437d29862dcdab10ee/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:28:53 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzM6NTMuMjMwWiIsInB1ciI6ImJsb2Jfa2V5In19--ffaf220bdb366bb155fd4c437d29862dcdab10ee", "filename"=>"cutecat"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/chat/1/orders" for 127.0.0.1 at 2022-03-15 16:28:54 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"lmzeOZkBLOL8rMCsrsAFbeydi7OzMyjhXFtWXh6Xcv3CcS/75nSlcRxJAyPOzx9dazTZLt0u+WCByftJPx54eQ==", "item_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-15 16:28:54 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (3.3ms)
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-15 16:29:44 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (13.6ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:29:48 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (60.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (2.8ms)
+Completed 200 OK in 109ms (Views: 84.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:29:48 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (1.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (2.3ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzQ6NDguMTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--33e9156fb7dbc1b4953d8cafb8e67e25220c5a8d/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzQ6NDguMTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--33e9156fb7dbc1b4953d8cafb8e67e25220c5a8d/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 11ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzQ6NDguMTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--33e9156fb7dbc1b4953d8cafb8e67e25220c5a8d/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:29:48 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzQ6NDguMTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--33e9156fb7dbc1b4953d8cafb8e67e25220c5a8d", "filename"=>"cutecat"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/chat/1/orders" for 127.0.0.1 at 2022-03-15 16:29:49 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"lMVWSN2CsUrZxm8/zTg58SoKL7hoYpPcGUnrJZ63A2zA2KeKovc42TkjrLCtNyPBraN9JQZ/Ql3E20Yyvz4J6A==", "item_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/orders_controller.rb:10
+  [1m[36mOrder Create (83.5ms)[0m  [1m[32mINSERT INTO "orders" ("achieved", "item_id", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["achieved", false], ["item_id", 1], ["customer_id", 1], ["created_at", "2022-03-15 15:29:49.970724"], ["updated_at", "2022-03-15 15:29:49.970724"]]
+  ↳ app/controllers/orders_controller.rb:10
+  [1m[35m (24.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/orders_controller.rb:10
+Redirected to http://localhost:3000/
+Completed 302 Found in 133ms (ActiveRecord: 112.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-15 16:29:50 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (2.9ms)
+Completed 200 OK in 40ms (Views: 38.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:29:51 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `achived' for #<Order:0x00007f922092db28>
+Did you mean?  achieved
+               achieved?
+               achieved=):
+  
+app/helpers/carts_helper.rb:5:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:29:53 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `achived' for #<Order:0x00007f9228176238>
+Did you mean?  achieved
+               achieved?
+               achieved=):
+  
+app/helpers/carts_helper.rb:5:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:29:55 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `achived' for #<Order:0x00007f9220887660>
+Did you mean?  achieved
+               achieved?
+               achieved=):
+  
+app/helpers/carts_helper.rb:5:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:29:57 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (3.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 3.7ms)
+
+
+  
+NoMethodError (undefined method `achived' for #<Order:0x00007f9204621f40>
+Did you mean?  achieved
+               achieved?
+               achieved=):
+  
+app/helpers/carts_helper.rb:5:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:30:41 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (64.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (15.3ms)
+Completed 200 OK in 117ms (Views: 94.1ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzQ6NDguMTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--33e9156fb7dbc1b4953d8cafb8e67e25220c5a8d/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:30:41 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzQ6NDguMTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--33e9156fb7dbc1b4953d8cafb8e67e25220c5a8d", "filename"=>"cutecat"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/chat/1/orders" for 127.0.0.1 at 2022-03-15 16:30:43 +0100
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"BOiED81gG0rJ+Ii+YO+KNbMQRIxG53L/riTxepI2j2FQ9XXNshWS2SkdSzEA4JAFNLkWESj6o35ztlxts7+F5Q==", "item_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/orders_controller.rb:10
+  [1m[36mOrder Create (0.8ms)[0m  [1m[32mINSERT INTO "orders" ("achieved", "item_id", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["achieved", false], ["item_id", 1], ["customer_id", 1], ["created_at", "2022-03-15 15:30:43.048153"], ["updated_at", "2022-03-15 15:30:43.048153"]]
+  ↳ app/controllers/orders_controller.rb:10
+  [1m[35m (113.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/orders_controller.rb:10
+Redirected to http://localhost:3000/
+Completed 302 Found in 129ms (ActiveRecord: 115.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-15 16:30:43 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (3.0ms)
+Completed 200 OK in 38ms (Views: 35.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:33:09 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (2.9ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzQ6NDguMTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--33e9156fb7dbc1b4953d8cafb8e67e25220c5a8d/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:33:09 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6MzQ6NDguMTk2WiIsInB1ciI6ImJsb2Jfa2V5In19--33e9156fb7dbc1b4953d8cafb8e67e25220c5a8d", "filename"=>"cutecat"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/chat/1/orders" for 127.0.0.1 at 2022-03-15 16:33:10 +0100
+Processing by OrdersController#create as JS
+  Parameters: {"item_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/orders_controller.rb:10
+  [1m[36mOrder Create (0.4ms)[0m  [1m[32mINSERT INTO "orders" ("achieved", "item_id", "customer_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["achieved", false], ["item_id", 1], ["customer_id", 1], ["created_at", "2022-03-15 15:33:10.732451"], ["updated_at", "2022-03-15 15:33:10.732451"]]
+  ↳ app/controllers/orders_controller.rb:10
+  [1m[35m (30.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/orders_controller.rb:10
+  Rendering orders/create.js.erb
+  Rendered orders/create.js.erb (0.4ms)
+Completed 200 OK in 52ms (Views: 2.9ms | ActiveRecord: 31.1ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:33:15 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.1ms)
+
+
+  
+NoMethodError (undefined method `achived' for #<Order:0x00007f921024d7f0>
+Did you mean?  achieved
+               achieved?
+               achieved=):
+  
+app/helpers/carts_helper.rb:5:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:33:16 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms)
+
+
+  
+NoMethodError (undefined method `achived' for #<Order:0x00007f92109e14d0>
+Did you mean?  achieved
+               achieved?
+               achieved=):
+  
+app/helpers/carts_helper.rb:5:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:33:18 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.8ms)
+
+
+  
+NoMethodError (undefined method `achived' for #<Order:0x00007f9204b76f90>
+Did you mean?  achieved
+               achieved?
+               achieved=):
+  
+app/helpers/carts_helper.rb:5:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:34:20 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+  Rendering carts/show.js.erb
+  Rendered application/_cart.html.erb (6.9ms)
+  Rendered carts/show.js.erb (9.3ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 11.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Order:0x00007f922081b348>):
+    4:     </div>
+    5:     <div class="cart-elements">
+    6:         <% session[:cart].each do |item| %>
+    7:             <p><%= item.name %></p>
+    8:         <% end %>
+    9:     </div>
+   10: </div>
+  
+app/views/application/_cart.html.erb:7:in `block in _app_views_application__cart_html_erb__2051056140048601329_66180'
+app/views/application/_cart.html.erb:6:in `each'
+app/views/application/_cart.html.erb:6:in `_app_views_application__cart_html_erb__2051056140048601329_66180'
+app/views/carts/show.js.erb:1:in `_app_views_carts_show_js_erb___566920041773044291_66160'
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:34:22 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (62.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (4.1ms)
+Completed 200 OK in 112ms (Views: 93.1ms | ActiveRecord: 13.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:34:23 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.2ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6Mzk6MjMuMTY4WiIsInB1ciI6ImJsb2Jfa2V5In19--a139bfdc616bb9ece3d3e0f9f28bc914f4e32a74/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6Mzk6MjMuMTY4WiIsInB1ciI6ImJsb2Jfa2V5In19--a139bfdc616bb9ece3d3e0f9f28bc914f4e32a74/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6Mzk6MjMuMTY4WiIsInB1ciI6ImJsb2Jfa2V5In19--a139bfdc616bb9ece3d3e0f9f28bc914f4e32a74/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:34:23 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6Mzk6MjMuMTY4WiIsInB1ciI6ImJsb2Jfa2V5In19--a139bfdc616bb9ece3d3e0f9f28bc914f4e32a74", "filename"=>"cutecat"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:34:23 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (1.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+  Rendering carts/show.js.erb
+  Rendered application/_cart.html.erb (11.1ms)
+  Rendered carts/show.js.erb (15.1ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Order:0x00007f92100bf820>):
+    4:     </div>
+    5:     <div class="cart-elements">
+    6:         <% session[:cart].each do |item| %>
+    7:             <p><%= item.name %></p>
+    8:         <% end %>
+    9:     </div>
+   10: </div>
+  
+app/views/application/_cart.html.erb:7:in `block in _app_views_application__cart_html_erb__2051056140048601329_66820'
+app/views/application/_cart.html.erb:6:in `each'
+app/views/application/_cart.html.erb:6:in `_app_views_application__cart_html_erb__2051056140048601329_66820'
+app/views/carts/show.js.erb:1:in `_app_views_carts_show_js_erb___566920041773044291_66800'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:34:24 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+  Rendering carts/show.js.erb
+  Rendered application/_cart.html.erb (10.2ms)
+  Rendered carts/show.js.erb (13.2ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Order:0x00007f92208679c8>):
+    4:     </div>
+    5:     <div class="cart-elements">
+    6:         <% session[:cart].each do |item| %>
+    7:             <p><%= item.name %></p>
+    8:         <% end %>
+    9:     </div>
+   10: </div>
+  
+app/views/application/_cart.html.erb:7:in `block in _app_views_application__cart_html_erb__2051056140048601329_67020'
+app/views/application/_cart.html.erb:6:in `each'
+app/views/application/_cart.html.erb:6:in `_app_views_application__cart_html_erb__2051056140048601329_67020'
+app/views/carts/show.js.erb:1:in `_app_views_carts_show_js_erb___566920041773044291_67000'
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:35:19 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (68.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (24.1ms)
+Completed 200 OK in 379ms (Views: 347.5ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:35:20 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (266.6ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDA6MjAuNDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--530267cebca4d0aa9f615f1f792b64ad5e82d18e/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDA6MjAuNDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--530267cebca4d0aa9f615f1f792b64ad5e82d18e/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 279ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDA6MjAuNDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--530267cebca4d0aa9f615f1f792b64ad5e82d18e/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:35:20 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDA6MjAuNDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--530267cebca4d0aa9f615f1f792b64ad5e82d18e", "filename"=>"cutecat"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:35:22 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+  Rendering carts/show.js.erb
+  Rendered application/_cart.html.erb (6.7ms)
+  Rendered carts/show.js.erb (8.4ms)
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 7.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Order:0x00007fda29728750>):
+    4:     </div>
+    5:     <div class="cart-elements">
+    6:         <% session[:cart].each do |item| %>
+    7:             <p><%= item.name %></p>
+    8:         <% end %>
+    9:     </div>
+   10: </div>
+  
+app/views/application/_cart.html.erb:7:in `block in _app_views_application__cart_html_erb__3053365190169934946_23300'
+app/views/application/_cart.html.erb:6:in `each'
+app/views/application/_cart.html.erb:6:in `_app_views_application__cart_html_erb__3053365190169934946_23300'
+app/views/carts/show.js.erb:1:in `_app_views_carts_show_js_erb___3390650776565182122_23280'
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:35:23 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (13.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (2.7ms)
+Completed 200 OK in 56ms (Views: 52.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:35:24 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (9.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (2.6ms)
+Completed 200 OK in 50ms (Views: 45.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:35:24 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+  Rendering carts/show.js.erb
+  Rendered application/_cart.html.erb (6.0ms)
+  Rendered carts/show.js.erb (8.6ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Order:0x00007fda1005dd30>):
+    4:     </div>
+    5:     <div class="cart-elements">
+    6:         <% session[:cart].each do |item| %>
+    7:             <p><%= item.name %></p>
+    8:         <% end %>
+    9:     </div>
+   10: </div>
+  
+app/views/application/_cart.html.erb:7:in `block in _app_views_application__cart_html_erb__3053365190169934946_23700'
+app/views/application/_cart.html.erb:6:in `each'
+app/views/application/_cart.html.erb:6:in `_app_views_application__cart_html_erb__3053365190169934946_23700'
+app/views/carts/show.js.erb:1:in `_app_views_carts_show_js_erb___3390650776565182122_23680'
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:36:33 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (68.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (22.7ms)
+Completed 200 OK in 136ms (Views: 109.1ms | ActiveRecord: 21.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:36:33 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDE6MzMuNzgyWiIsInB1ciI6ImJsb2Jfa2V5In19--22bed2572702bb774bcad9f851702183b34b5e40/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDE6MzMuNzgyWiIsInB1ciI6ImJsb2Jfa2V5In19--22bed2572702bb774bcad9f851702183b34b5e40/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDE6MzMuNzgyWiIsInB1ciI6ImJsb2Jfa2V5In19--22bed2572702bb774bcad9f851702183b34b5e40/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:36:33 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDE6MzMuNzgyWiIsInB1ciI6ImJsb2Jfa2V5In19--22bed2572702bb774bcad9f851702183b34b5e40", "filename"=>"cutecat"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:36:34 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (1.0ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 6.7ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Order:0x00007fda2c1f8660>):
+  
+app/helpers/carts_helper.rb:6:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:36:43 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Order:0x00007fda29fe9fd8>):
+  
+app/helpers/carts_helper.rb:6:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:36:43 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Order:0x00007fda29a62da8>):
+  
+app/helpers/carts_helper.rb:6:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:36:44 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.7ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Order:0x00007fda1097b138>):
+  
+app/helpers/carts_helper.rb:6:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:36:44 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:4
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:5
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.5ms)
+
+
+  
+NoMethodError (undefined method `name' for #<Order:0x00007fda10367828>):
+  
+app/helpers/carts_helper.rb:6:in `block in current_cart'
+app/helpers/carts_helper.rb:4:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:37:52 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (61.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (23.1ms)
+Completed 200 OK in 127ms (Views: 103.7ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:37:53 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDI6NTMuMDgyWiIsInB1ciI6ImJsb2Jfa2V5In19--3c5cf623e0570b40aa714068947c20ff81b8c852/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDI6NTMuMDgyWiIsInB1ciI6ImJsb2Jfa2V5In19--3c5cf623e0570b40aa714068947c20ff81b8c852/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDI6NTMuMDgyWiIsInB1ciI6ImJsb2Jfa2V5In19--3c5cf623e0570b40aa714068947c20ff81b8c852/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:37:53 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDI6NTMuMDgyWiIsInB1ciI6ImJsb2Jfa2V5In19--3c5cf623e0570b40aa714068947c20ff81b8c852", "filename"=>"cutecat"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:37:53 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (1.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:5
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:6
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 15.4ms)
+
+
+  
+NoMethodError (undefined method `achived' for #<Order:0x00007fda2989cc58>
+Did you mean?  achieved
+               achieved?
+               achieved=):
+  
+app/helpers/carts_helper.rb:6:in `block in current_cart'
+app/helpers/carts_helper.rb:5:in `current_cart'
+app/controllers/carts_controller.rb:26:in `load_cart'
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:38:07 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (46.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (18.4ms)
+Completed 200 OK in 120ms (Views: 114.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:38:07 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDM6MDcuNzk0WiIsInB1ciI6ImJsb2Jfa2V5In19--0ffc2217d9726d6bcbdce62f7576afc3f8887f66/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDM6MDcuNzk0WiIsInB1ciI6ImJsb2Jfa2V5In19--0ffc2217d9726d6bcbdce62f7576afc3f8887f66/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDM6MDcuNzk0WiIsInB1ciI6ImJsb2Jfa2V5In19--0ffc2217d9726d6bcbdce62f7576afc3f8887f66/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:38:07 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDM6MDcuNzk0WiIsInB1ciI6ImJsb2Jfa2V5In19--0ffc2217d9726d6bcbdce62f7576afc3f8887f66", "filename"=>"cutecat"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:38:08 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (1.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:5
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:6
+  Rendering carts/show.js.erb
+  Rendered application/_cart.html.erb (1.0ms)
+  Rendered carts/show.js.erb (4.2ms)
+Completed 200 OK in 37ms (Views: 9.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:38:20 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (13.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (2.9ms)
+Completed 200 OK in 57ms (Views: 51.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:38:20 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (3.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.1ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDM6MjAuNDcxWiIsInB1ciI6ImJsb2Jfa2V5In19--d335e1da8d3f10a630694365aa5d064018c1cd23/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDM6MjAuNDcxWiIsInB1ciI6ImJsb2Jfa2V5In19--d335e1da8d3f10a630694365aa5d064018c1cd23/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDM6MjAuNDcxWiIsInB1ciI6ImJsb2Jfa2V5In19--d335e1da8d3f10a630694365aa5d064018c1cd23/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:38:20 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDM6MjAuNDcxWiIsInB1ciI6ImJsb2Jfa2V5In19--d335e1da8d3f10a630694365aa5d064018c1cd23", "filename"=>"cutecat"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:38:21 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.7ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:5
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:6
+  Rendering carts/show.js.erb
+  Rendered application/_cart.html.erb (12.9ms)
+  Rendered carts/show.js.erb (16.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Order:0x00007fda29b3c3a0>):
+    4:     </div>
+    5:     <div class="cart-elements">
+    6:         <% session[:cart].each do |item| %>
+    7:             <p><%= item.name %></p>
+    8:         <% end %>
+    9:     </div>
+   10: </div>
+  
+app/views/application/_cart.html.erb:7:in `block in _app_views_application__cart_html_erb__3053365190169934946_55640'
+app/views/application/_cart.html.erb:6:in `each'
+app/views/application/_cart.html.erb:6:in `_app_views_application__cart_html_erb__3053365190169934946_55640'
+app/views/carts/show.js.erb:1:in `_app_views_carts_show_js_erb___3390650776565182122_55620'
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:38:23 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.6ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:5
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:6
+  Rendering carts/show.js.erb
+  Rendered application/_cart.html.erb (8.8ms)
+  Rendered carts/show.js.erb (11.4ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Order:0x00007fda104c1d40>):
+    4:     </div>
+    5:     <div class="cart-elements">
+    6:         <% session[:cart].each do |item| %>
+    7:             <p><%= item.name %></p>
+    8:         <% end %>
+    9:     </div>
+   10: </div>
+  
+app/views/application/_cart.html.erb:7:in `block in _app_views_application__cart_html_erb__3053365190169934946_55840'
+app/views/application/_cart.html.erb:6:in `each'
+app/views/application/_cart.html.erb:6:in `_app_views_application__cart_html_erb__3053365190169934946_55840'
+app/views/carts/show.js.erb:1:in `_app_views_carts_show_js_erb___3390650776565182122_55820'
+Started GET "/chat" for 127.0.0.1 at 2022-03-15 16:40:50 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (57.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (17.6ms)
+Completed 200 OK in 128ms (Views: 120.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:40:50 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.4ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDU6NTAuODY4WiIsInB1ciI6ImJsb2Jfa2V5In19--69e311210355b72032b9561493ff27a783d8c23c/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDU6NTAuODY4WiIsInB1ciI6ImJsb2Jfa2V5In19--69e311210355b72032b9561493ff27a783d8c23c/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDU6NTAuODY4WiIsInB1ciI6ImJsb2Jfa2V5In19--69e311210355b72032b9561493ff27a783d8c23c/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-15 16:40:50 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTVUMTU6NDU6NTAuODY4WiIsInB1ciI6ImJsb2Jfa2V5In19--69e311210355b72032b9561493ff27a783d8c23c", "filename"=>"cutecat"}
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-15 16:40:51 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/helpers/carts_helper.rb:5
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:6
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:7
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:7
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  "orders".* FROM "orders" WHERE "orders"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/helpers/carts_helper.rb:7
+  Rendering carts/show.js.erb
+  Rendered application/_cart.html.erb (6.9ms)
+  Rendered carts/show.js.erb (9.0ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 8.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Order:0x00007fda107f8388>):
+    4:     </div>
+    5:     <div class="cart-elements">
+    6:         <% session[:cart].each do |item| %>
+    7:             <p><%= item.name %></p>
+    8:         <% end %>
+    9:     </div>
+   10: </div>
+  
+app/views/application/_cart.html.erb:7:in `block in _app_views_application__cart_html_erb__3053365190169934946_66260'
+app/views/application/_cart.html.erb:6:in `each'
+app/views/application/_cart.html.erb:6:in `_app_views_application__cart_html_erb__3053365190169934946_66260'
+app/views/carts/show.js.erb:1:in `_app_views_carts_show_js_erb___3390650776565182122_66240'
