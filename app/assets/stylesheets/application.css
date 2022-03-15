@@ -25,3 +25,14 @@ body {
   position: relative;
   height: 100vh;
 }
+
+.carousel-item {
+
+  margin-top: 100px;
+  
+
+}
+.d-block{
+
+  border-radius: 150px;
+}
