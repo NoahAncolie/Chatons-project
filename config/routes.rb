@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :items, path: 'chat' do
     resources :comments
   end
-  resources :carts, only: [:show, :update, :destroy], path: 'panier'
+  resources :carts, only: [:create, :show, :update, :destroy], path: 'panier'
   resources :users, only: [:show, :update, :edit], path: 'profil'
   resources :charges, only: [:new, :create], path: 'paiement'
 end
