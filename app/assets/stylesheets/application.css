@@ -25,11 +25,16 @@ body {
   height: 100vh;
 }
 
-.card{
- margin-left: 600px;
- margin-top: 150px;
-}
+<<<<<<< HEAD
+.carousel-item {
 
-.card-text{
-  font-family: 'League Gothic', sans-serif;
+  margin-top: 100px;
+  
+
 }
+.d-block{
+
+  border-radius: 150px;
+}
+=======
+>>>>>>> cats-shop
