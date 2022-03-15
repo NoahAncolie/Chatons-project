@@ -8,7 +8,6 @@ gem 'stripe'
 gem 'devise'
 gem "dotenv-rails"
 gem 'execjs'
-
 gem 'table_print'
 gem 'faker'
 gem 'simple_form'
