@@ -4,7 +4,7 @@
     </div>
     <div class="cart-elements">
         <% @cart.each do |item| %>
-            <p><%= item %></p>
+            <p><%= Item.find(item.item_id).name %></p>
         <% end %>
     </div>
 </div>

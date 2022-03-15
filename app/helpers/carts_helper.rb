@@ -4,7 +4,7 @@ module CartsHelper
         @orders = Order.all
         @orders.each do |order|
             if order.customer_id == current_user.id && !order.achieved
-                @current_cart << order.name
+                @current_cart << order
             end
         end
     end
