@@ -5,7 +5,7 @@ class CartsController < ApplicationController
   end
 
   def create
-    
+    @cart-item = Cart.new()
   end
 
   def new
