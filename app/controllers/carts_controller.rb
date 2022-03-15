@@ -1,6 +1,6 @@
 class CartsController < ApplicationController
   include CartsHelper
-  before_action :load_cart
+
   def index
   end
 
@@ -14,6 +14,7 @@ class CartsController < ApplicationController
   end
 
   def show
+    @cart = current_cart
     respond_to do |format|
       format.html { redirect_to '/' }
       format.js { }
@@ -22,7 +23,4 @@ class CartsController < ApplicationController
 
   private
 
-  def load_cart
-    session[:cart] = current_cart
-  end
 end

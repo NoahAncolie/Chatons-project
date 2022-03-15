@@ -1,8 +1,9 @@
 module CartsHelper
     def current_cart
         @current_cart = []
-        Order.all.each do |order|
-            if order.customer_id == current_user.id && !order.achived
+        @orders = Order.all
+        @orders.each do |order|
+            if order.customer_id == current_user.id && !order.achieved
                 @current_cart << order
             end
         end
