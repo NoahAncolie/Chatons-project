@@ -3,7 +3,7 @@
         <h4>Panier</h4>
     </div>
     <div class="cart-elements">
-        <% session[:cart].all do |item| %>
+        <% session[:cart].each do |item| %>
             <p><%= item.name %></p>
         <% end %>
     </div>

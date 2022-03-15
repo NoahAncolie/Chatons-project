@@ -1,6 +1,6 @@
 <% @items.each do |item| %>
     <p><%= item.name %></p>
     <%= image_tag(item.picture) if item.picture.attached?  %>
-    <%= link_to "Ajouter au Panier", orders_path, method: :post%>
+    <%= link_to "Ajouter au Panier", orders_path, params: { item_id: item.id }, method: :post %>
     <%= link_to "Commander" %>
 <% end %>
