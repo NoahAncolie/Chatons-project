@@ -9,6 +9,7 @@ gem 'devise'
 gem "dotenv-rails"
 gem 'execjs'
 gem 'table_print'
+gem 'letter_opener'
 gem 'faker'
 gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
