@@ -1,0 +1,17 @@
+.cart-body {
+    position : fixed;
+    top : 70px;
+    right : 30px;
+    width : 200px;
+    height : 400px;
+    background-color : red;
+}
+
+.cart-title {
+    padding : 10px;
+}
+
+.cart-elements {
+    overflow-y : auto;
+    scrollbar-color:  red blue;
+}
