@@ -1,4 +1,5 @@
 class CartsController < ApplicationController
+  include CartsHelper
   before_action :load_cart
   def index
   end
@@ -13,6 +14,10 @@ class CartsController < ApplicationController
   end
 
   def show
+    respond_to do |format|
+      format.html { redirect_to '/' }
+      format.js { }
+    end
   end
 
   private
