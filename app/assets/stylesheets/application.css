@@ -23,10 +23,13 @@ body {
   background-size: cover;
   position: relative;
   height: 100vh;
-<<<<<<< HEAD
 }
 
-
-=======
+.card{
+ margin-left: 600px;
+ margin-top: 150px;
 }
->>>>>>> chats
+
+.card-text{
+  font-family: 'League Gothic', sans-serif;
+}
