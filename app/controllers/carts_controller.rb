@@ -1,10 +1,12 @@
 class CartsController < ApplicationController
   include CartsHelper
+  before_action :authenticate_user
 
   def index
   end
 
   def create
+    :authenticate_user
     @cart_item = CartItem.new(permit_params)
     if @cart_item.save
       redirect_to '/'
@@ -28,6 +30,9 @@ class CartsController < ApplicationController
     end
   end
 
+  def destroy
+    
+  end
   private
 
   def find_price
@@ -40,4 +45,9 @@ class CartsController < ApplicationController
     params.permit(:item_id, :user_id, :quantity, :price)
   end
 
+  def authenticate_user
+    unless (user_signed_in?)
+      redirect_to user_session_path
+    end
+  end
 end
