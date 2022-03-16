@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'contact/index'
   devise_for :users
-  resources :charges
+  resources :user_logins, only: [:new]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: 'landings#index'
   resources :items, path: 'chat' do
@@ -10,5 +11,7 @@ Rails.application.routes.draw do
   end
   resources :carts, only: [:create, :show, :update, :destroy], path: 'panier'
   resources :users, only: [:show, :update, :edit], path: 'profil'
-  resources :charges, only: [:new, :create], path: 'paiement'
+  resources :charges, only: [:new, :create]
+  resources :contact, only: [:index], path: 'contact'
 end
+ 

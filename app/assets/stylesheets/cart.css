@@ -1,10 +1,12 @@
 .cart-body {
+    animation : openCart 1s ease-in-out;
     position : fixed;
     top : 70px;
     right : 30px;
     width : 200px;
     height : 400px;
-    background-color : red;
+    border-radius : 5px;
+    background-color : whitesmoke;
 }
 
 .cart-title {
@@ -12,6 +14,11 @@
 }
 
 .cart-elements {
-    overflow-y : auto;
-    scrollbar-color:  red blue;
+    overflow-y : scroll;
+    scrollbar-color:  lightgray whitesmoke;
+}
+
+@keyframes openCart {
+    0% { right : 1020px; top : -170px; transform: scale(0.1); opacity : 10%; }
+    100% { right : 30px; top : 70px; transform: scale(1); opacity : 100%; }
 }
