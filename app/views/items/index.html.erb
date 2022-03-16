@@ -1,4 +1,30 @@
 <% @items.each do |item| %>
-    <p><%= item.name %></p>
-    <%= image_tag(item.picture) if item.picture.attached?  %>
+    <div class="card" style="width: 18rem;">
+        <%= image_tag(item.picture) if item.picture.attached?  %>
+        <div class="card-body" style="width : 100%;">
+            <div class="clickable">
+                <h5 class="card-title "><%= item.name %></h5>
+                <h6 class="card-subtitle mb-2 text-muted">Je Veux</h6>
+            </div>
+            <div id="photo<%= item.id %>" class="collapse buying-div">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <%= form_with url: carts_path(item.id), method: :post do |form| %>
+                    <%= form.label "quantity" %>
+                    <%= form.hidden_field :item_id, value: item.id %>
+                    <%= form.number_field :quantity, value: 1, in: 1.0..1000.0, step: 1,class: "form-control"%><br>
+                    <%= form.submit "Ajouter au Panier", class: "btn btn-outline-primary" %>
+                <% end %>
+                <%= link_to "Acheter cet article", class: "btn" %>
+            </div>
+        </div>
+    </div>
 <% end %>
+
+<script>
+    items = document.getElementsByClassName("clickable")
+    for (let i = 0; i < items.length; i++){
+        items[i].addEventListener("click", function(){
+            document.getElementsByClassName("buying-div")[i].classList.toggle("collapse")
+        })
+    }
+</script>

@@ -10,12 +10,28 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
- *= require_tree .
- *= require_self
+ *= require cart
  */
 
 body {
   color: rgba(0, 0, 0,);
   text-align: center;
-  font-family: 'Poppins', sans-serif;;
+  font-family: 'Poppins', sans-serif;
+  background-image: url("https://p4.wallpaperbetter.com/wallpaper/133/340/1014/animals-cats-cute-wallpaper-preview.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+}
+
+.carousel-item {
+
+  margin-top: 100px;
+  
+
+}
+.d-block{
+
+  border-radius: 150px;
 }
