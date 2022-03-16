@@ -62,3 +62,12 @@ margin: 0 20px
   color: #fff;
   text-decoration: uppercase;
 }
+.footer{
+  position:absolute;
+  width: 100%;
+  bottom: 0;
+  background: 
+#ffd90100 url(img/footer.png) ;
+
+
+}
