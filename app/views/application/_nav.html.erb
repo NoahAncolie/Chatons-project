@@ -1,7 +1,4 @@
-    <div class="banner">
-      <div class="navbar">
-      <img src="/home/mlffe/Desktop/chaton/Chatons-project/app/assets/images/logo.png"  width="200" height="200"> 
-          <ul>
+        <ul>
         <li class="nav-item">
           <a class="nav-link active" href="<%= items_path %>">Pictures
             <span class="visually-hidden">(current)</span>
@@ -17,8 +14,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contact#index">Contact</a>
-      
-              </li>
+        </li>
         <li class="nav-item dropdown">
           <% if user_signed_in? %>
             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">me : <%= current_user.username if current_user.username %></a>
@@ -42,7 +38,5 @@
             </div>
         </li>
         <ul>
-      </div>
-    </div>
 
 
