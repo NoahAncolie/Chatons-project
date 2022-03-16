@@ -11,13 +11,15 @@
  * It is generally better to create a new file per style scope.
  *
  *= require cart
+ *= require form-friendly
+ *= require items
  */
 
 body {
   color: rgba(0, 0, 0,);
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  background-image: url("https://p4.wallpaperbetter.com/wallpaper/133/340/1014/animals-cats-cute-wallpaper-preview.jpg");
+  background-image: url("cat16.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,13 +27,38 @@ body {
   height: 100vh;
 }
 
+.d-block{
 
-.footer{
-  position:absolute;
+  border-radius: 150px;
+}
+.banner{
   width: 100%;
-  bottom: 0;
-  background: 
-#ffd90100 url(img/footer.png) ;
+  height: 100vh;
+  background-image: linear-gradient(rgda(0,0,0,0.75),rgda(0,0,0,0.75)),url(background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.navbar{
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo{
+  width: 120px;
+  cursor: pointer
+}
+.navbar ul li{
+list-style: none;
+display: inline-block;
+margin: 0 20px
 
+}
 
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-decoration: uppercase;
 }

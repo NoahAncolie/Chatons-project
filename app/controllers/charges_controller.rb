@@ -1,9 +1,9 @@
 class ChargesController < ApplicationController
     def new
+        @amount = calculate_order_amount
     end
     
     def create
-        # Amount in cents
         @amount = 500
     
         customer = Stripe::Customer.create({

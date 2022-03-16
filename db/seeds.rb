@@ -6,12 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-5.times do |i|
+8.times do |i|
     item = Item.new
-    download = URI.open("https://resize3.prod.docfr.doc-media.fr/rcrop/1200,902,center-middle/img/var/doctissimo/storage/images/fr/www/animaux/chat/choisir-chat/age-d-adoption-du-chaton/722163-2-fre-FR/age-d-adoption-du-chaton.jpg")
-    item.picture.attach(io: download, filenema: "cat.jpg")
+    item.picture.attach(io: File.open(File.join(Rails.root,"app/assets/images/#{i}.jpg")), filename: 'chat.jpg')
     item.name = "Photo de chat"
     item.price = 100
-    item.quantity = 3
     item.save
 end
