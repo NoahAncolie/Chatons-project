@@ -1,0 +1,29 @@
+.login {
+    align-content : center;
+    width : 250px;
+    height : 450px;
+    background-color : whitesmoke;
+}
+
+.login-outer {
+    width : 350px;
+    display : flex;
+    justify-content : center;
+    background-color : whitesmoke;
+}
+
+.login-body {
+    border : 1px solid violet;
+    width : 100%;
+    height : 90%;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up {
+    align-content : center;
+    width : 200px;
+    height : 450px;
+    background-color : whitesmoke;
+}

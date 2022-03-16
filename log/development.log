@@ -8849,3 +8849,1711 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 92ms (Views: 89.0ms | ActiveRecord: 1.5ms)
 
 
+Started GET "/chat" for 127.0.0.1 at 2022-03-16 10:58:57 +0100
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (9.0ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (2.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (1512.7ms)
+  Rendered application/_nav.html.erb (3.5ms)
+Completed 200 OK in 2011ms (Views: 1967.9ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-16 10:58:59 +0100
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--beb23836c54ac2823c6d11709c0001c2cd00babe/chat.jpg" for 127.0.0.1 at 2022-03-16 10:58:59 +0100
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d5983c7aca242c11ff44842892d9035f286a981/chat.jpg" for 127.0.0.1 at 2022-03-16 10:58:59 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--beb23836c54ac2823c6d11709c0001c2cd00babe", "filename"=>"chat"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (5.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d5983c7aca242c11ff44842892d9035f286a981", "filename"=>"chat"}
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.6ms) [0m[34mGenerated URL for file at key: 9JETGGbeVZQGc3UTAcaY4eQR (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjAwLjAwOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e6071ad04e99fde2036073b805ef5a678ff47676/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjAwLjAwOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e6071ad04e99fde2036073b805ef5a678ff47676/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg
+Completed 302 Found in 28ms (ActiveRecord: 5.4ms)
+
+
+  [1m[36mActiveStorage::Blob Load (6.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (6.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (1.6ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDQ6MDAuMDE4WiIsInB1ciI6ImJsb2Jfa2V5In19--e9a423b4dc7571d24c36a718f3186f2cad0a88ff/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDQ6MDAuMDE4WiIsInB1ciI6ImJsb2Jfa2V5In19--e9a423b4dc7571d24c36a718f3186f2cad0a88ff/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 31ms (ActiveRecord: 13.6ms)
+
+
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: v1MFK7BZHrmd4tHJQPw2rPFg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjAwLjAzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--7edd2fad903a185e9f476ea672f90fb1a5959d98/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjAwLjAzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--7edd2fad903a185e9f476ea672f90fb1a5959d98/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg
+Completed 302 Found in 37ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjAwLjAwOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e6071ad04e99fde2036073b805ef5a678ff47676/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg" for 127.0.0.1 at 2022-03-16 10:59:00 +0100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDQ6MDAuMDE4WiIsInB1ciI6ImJsb2Jfa2V5In19--e9a423b4dc7571d24c36a718f3186f2cad0a88ff/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-16 10:59:00 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chat.jpg\"; filename*=UTF-8''chat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjAwLjAwOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--e6071ad04e99fde2036073b805ef5a678ff47676", "filename"=>"chat"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDQ6MDAuMDE4WiIsInB1ciI6ImJsb2Jfa2V5In19--e9a423b4dc7571d24c36a718f3186f2cad0a88ff", "filename"=>"cutecat"}
+Completed 200 OK in 12ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 11ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjAwLjAzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--7edd2fad903a185e9f476ea672f90fb1a5959d98/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg" for 127.0.0.1 at 2022-03-16 10:59:00 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chat.jpg\"; filename*=UTF-8''chat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjAwLjAzOFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--7edd2fad903a185e9f476ea672f90fb1a5959d98", "filename"=>"chat"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/panier.1" for 127.0.0.1 at 2022-03-16 10:59:02 +0100
+Processing by CartsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"v4CeR1H4k77Uuk1WwygxIvw97RzoJKoFmTs9aWSLPxg7/2yRis/MhdUYcR2EW+NKkiPsgXlqi97kcCeziMMr8w==", "item_id"=>"1", "quantity"=>"7", "commit"=>"Ajouter au Panier"}
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:35
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/carts_controller.rb:40:in `permit_params'
+app/controllers/carts_controller.rb:9:in `create'
+Started GET "/chat" for 127.0.0.1 at 2022-03-16 10:59:39 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (79.5ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 120ms (Views: 96.2ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-16 10:59:39 +0100
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d5983c7aca242c11ff44842892d9035f286a981/chat.jpg" for 127.0.0.1 at 2022-03-16 10:59:39 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::BlobsController#show as JPEG
+[36m  Disk Storage (1.4ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDQ6MzkuNjU4WiIsInB1ciI6ImJsb2Jfa2V5In19--59efea4ad66f5e95c6b29e43839add89e2f2bb68/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--beb23836c54ac2823c6d11709c0001c2cd00babe/chat.jpg" for 127.0.0.1 at 2022-03-16 10:59:39 +0100
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d5983c7aca242c11ff44842892d9035f286a981", "filename"=>"chat"}
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDQ6MzkuNjU4WiIsInB1ciI6ImJsb2Jfa2V5In19--59efea4ad66f5e95c6b29e43839add89e2f2bb68/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Processing by ActiveStorage::BlobsController#show as JPEG
+Completed 302 Found in 18ms (ActiveRecord: 0.8ms)
+
+
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--beb23836c54ac2823c6d11709c0001c2cd00babe", "filename"=>"chat"}
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: 9JETGGbeVZQGc3UTAcaY4eQR (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjM5LjY3M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--fbcf4fef8ac6609f21897cb5359e5fc285f41581/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjM5LjY3M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--fbcf4fef8ac6609f21897cb5359e5fc285f41581/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+  [1m[36mActiveStorage::Blob Load (10.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: v1MFK7BZHrmd4tHJQPw2rPFg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjM5LjY3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a635d7aea10ba461c89e0b8295c8c03db1698300/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjM5LjY3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a635d7aea10ba461c89e0b8295c8c03db1698300/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg
+Completed 302 Found in 18ms (ActiveRecord: 10.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjM5LjY3M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--fbcf4fef8ac6609f21897cb5359e5fc285f41581/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg" for 127.0.0.1 at 2022-03-16 10:59:39 +0100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDQ6MzkuNjU4WiIsInB1ciI6ImJsb2Jfa2V5In19--59efea4ad66f5e95c6b29e43839add89e2f2bb68/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-16 10:59:39 +0100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjM5LjY3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a635d7aea10ba461c89e0b8295c8c03db1698300/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg" for 127.0.0.1 at 2022-03-16 10:59:39 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chat.jpg\"; filename*=UTF-8''chat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjM5LjY3M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--fbcf4fef8ac6609f21897cb5359e5fc285f41581", "filename"=>"chat"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chat.jpg\"; filename*=UTF-8''chat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA0OjM5LjY3OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a635d7aea10ba461c89e0b8295c8c03db1698300", "filename"=>"chat"}
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDQ6MzkuNjU4WiIsInB1ciI6ImJsb2Jfa2V5In19--59efea4ad66f5e95c6b29e43839add89e2f2bb68", "filename"=>"cutecat"}
+Completed 200 OK in 3ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 5ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/panier.1" for 127.0.0.1 at 2022-03-16 10:59:43 +0100
+Processing by CartsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HkyM/1PJt09+msJ7vkaJ7lIOQl/WBt1Q8WTUkXlTzfqaM34piP7odH84/jD5NVuGPBBDwkdI/IuML85LlRvZEQ==", "item_id"=>"1", "quantity"=>"7", "commit"=>"Ajouter au Panier"}
+Completed 500 Internal Server Error in 195ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `new_user_login' for #<CartsController:0x00007fed126505e8>
+Did you mean?  new_user_login_url):
+  
+app/controllers/carts_controller.rb:47:in `authenticate_user'
+Started POST "/panier.1" for 127.0.0.1 at 2022-03-16 11:00:12 +0100
+Processing by CartsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HkyM/1PJt09+msJ7vkaJ7lIOQl/WBt1Q8WTUkXlTzfqaM34piP7odH84/jD5NVuGPBBDwkdI/IuML85LlRvZEQ==", "item_id"=>"1", "quantity"=>"7", "commit"=>"Ajouter au Panier"}
+Redirected to http://localhost:3000/user_logins/new
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:12 +0100
+Processing by UserLoginsController#new as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/user_logins_controller.rb:3:in `new'
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:43 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:44 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:44 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:44 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:44 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:44 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:44 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:44 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:45 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:45 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:45 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:45 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:45 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:45 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:45 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:45 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:45 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:46 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2022-03-16 11:00:48 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (108.2ms)
+  Rendered application/_nav.html.erb (1.2ms)
+Completed 200 OK in 166ms (Views: 143.3ms | ActiveRecord: 16.6ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-16 11:00:48 +0100
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--beb23836c54ac2823c6d11709c0001c2cd00babe/chat.jpg" for 127.0.0.1 at 2022-03-16 11:00:48 +0100
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d5983c7aca242c11ff44842892d9035f286a981/chat.jpg" for 127.0.0.1 at 2022-03-16 11:00:48 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--beb23836c54ac2823c6d11709c0001c2cd00babe", "filename"=>"chat"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+Processing by ActiveStorage::BlobsController#show as JPEG
+  [1m[36mActiveStorage::Blob Load (3.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d5983c7aca242c11ff44842892d9035f286a981", "filename"=>"chat"}
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 9JETGGbeVZQGc3UTAcaY4eQR (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4Ljc5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cf3e4a9c8f70faa8bff37cf8e7c8b39b6f1e2774/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg)[0m
+  [1m[36mActiveStorage::Blob Load (2.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDU6NDguNzk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a728c11eb198c8a68898b426444bbe8819c96a35/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDU6NDguNzk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a728c11eb198c8a68898b426444bbe8819c96a35/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms)
+
+
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4Ljc5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cf3e4a9c8f70faa8bff37cf8e7c8b39b6f1e2774/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg
+Completed 302 Found in 26ms (ActiveRecord: 3.0ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.5ms) [0m[34mGenerated URL for file at key: v1MFK7BZHrmd4tHJQPw2rPFg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4LjgwOVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ff97ee0ca99b3644673d45138f482cd210fbe5dd/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4LjgwOVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ff97ee0ca99b3644673d45138f482cd210fbe5dd/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg
+Completed 302 Found in 18ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4LjgwOVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ff97ee0ca99b3644673d45138f482cd210fbe5dd/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg" for 127.0.0.1 at 2022-03-16 11:00:48 +0100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDU6NDguNzk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a728c11eb198c8a68898b426444bbe8819c96a35/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-16 11:00:48 +0100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4Ljc5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cf3e4a9c8f70faa8bff37cf8e7c8b39b6f1e2774/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg" for 127.0.0.1 at 2022-03-16 11:00:48 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chat.jpg\"; filename*=UTF-8''chat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4LjgwOVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ff97ee0ca99b3644673d45138f482cd210fbe5dd", "filename"=>"chat"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDU6NDguNzk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a728c11eb198c8a68898b426444bbe8819c96a35", "filename"=>"cutecat"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chat.jpg\"; filename*=UTF-8''chat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4Ljc5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cf3e4a9c8f70faa8bff37cf8e7c8b39b6f1e2774", "filename"=>"chat"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/panier.1" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by CartsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LrrQa4HstSS4/VvDKTkk+CPhRW4mIl7UymLNcLbqhkiqxSK9WtvqH7lfZ4huSvaQTf9E87dsfw+3KdeqWqKSow==", "item_id"=>"1", "quantity"=>"1", "commit"=>"Ajouter au Panier"}
+Redirected to http://localhost:3000/user_logins/new
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:51 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 7ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:00:53 +0100
+Processing by UserLoginsController#new as HTML
+Redirected to http://localhost:3000/user_logins/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/panier.1" for 127.0.0.1 at 2022-03-16 11:01:13 +0100
+Processing by CartsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LrrQa4HstSS4/VvDKTkk+CPhRW4mIl7UymLNcLbqhkiqxSK9WtvqH7lfZ4huSvaQTf9E87dsfw+3KdeqWqKSow==", "item_id"=>"1", "quantity"=>"1", "commit"=>"Ajouter au Panier"}
+Redirected to http://localhost:3000/user_logins/new
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_logins/new" for 127.0.0.1 at 2022-03-16 11:01:13 +0100
+Processing by UserLoginsController#new as HTML
+Completed 406 Not Acceptable in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/user_logins_controller.rb:3:in `new'
+Started GET "/" for 127.0.0.1 at 2022-03-16 11:03:07 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/_call_to_action.html.erb (0.3ms)
+  Rendered landings/_carousel.html.erb (3.7ms)
+  Rendered landings/index.html.erb within layouts/application (5.8ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 142ms (Views: 140.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2022-03-16 11:03:09 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.3ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (75.6ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 113ms (Views: 80.2ms | ActiveRecord: 26.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-16 11:03:10 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDg6MTAuMTU4WiIsInB1ciI6ImJsb2Jfa2V5In19--60ef3fe6b5c87d22aae6b478d1b66c60990294c7/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDg6MTAuMTU4WiIsInB1ciI6ImJsb2Jfa2V5In19--60ef3fe6b5c87d22aae6b478d1b66c60990294c7/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 8ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDU6NDguNzk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a728c11eb198c8a68898b426444bbe8819c96a35/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-16 11:03:10 +0100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4LjgwOVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ff97ee0ca99b3644673d45138f482cd210fbe5dd/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg" for 127.0.0.1 at 2022-03-16 11:03:10 +0100
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4Ljc5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cf3e4a9c8f70faa8bff37cf8e7c8b39b6f1e2774/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg" for 127.0.0.1 at 2022-03-16 11:03:10 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chat.jpg\"; filename*=UTF-8''chat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4Ljc5M1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--cf3e4a9c8f70faa8bff37cf8e7c8b39b6f1e2774", "filename"=>"chat"}
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMTA6MDU6NDguNzk2WiIsInB1ciI6ImJsb2Jfa2V5In19--a728c11eb198c8a68898b426444bbe8819c96a35", "filename"=>"cutecat"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chat.jpg\"; filename*=UTF-8''chat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDEwOjA1OjQ4LjgwOVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--ff97ee0ca99b3644673d45138f482cd210fbe5dd", "filename"=>"chat"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/panier.1" for 127.0.0.1 at 2022-03-16 11:03:12 +0100
+Processing by CartsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"M25pIz01DVpKeKBomjM4y8ZTyyPsz2/wnrG7j4IAanhGBldA8551+UGJi8eivg6Kv8WnxCw1mx6LTic1fUimpg==", "item_id"=>"1", "quantity"=>"1", "commit"=>"Ajouter au Panier"}
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:03:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (352.6ms)
+  Rendered application/_nav.html.erb (1.3ms)
+Completed 200 OK in 438ms (Views: 408.5ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/chat" for 127.0.0.1 at 2022-03-16 11:06:01 +0100
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (56.1ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 92ms (Views: 86.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/panier.1" for 127.0.0.1 at 2022-03-16 11:06:11 +0100
+Processing by CartsController#create as 
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JWwSgWfPJ9h97WQGEYOfask8CKCOyLeapdlMnGOGWkVQBCziqWRfe3YcT6kpDqkrsKpkR04yQ3SwJtAmnM6Wmw==", "item_id"=>"1", "quantity"=>"1", "commit"=>"Ajouter au Panier"}
+Redirected to http://localhost:3000/users/sign_in
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:06:11 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.3ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 69ms (Views: 49.7ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:06:16 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IZm0mcPTha648Y6CawXKjrqSEC1D9q4j56cWDz7TWYKKL+FdavdB9KEKOkrECKy0DsnnBkeCUqAvHBuLducVZg==", "user"=>{"email"=>"adrien.benaceur@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (363.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "adrien.benaceur@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 901ms (ActiveRecord: 363.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-16 11:06:17 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/_call_to_action.html.erb (0.5ms)
+  Rendered landings/_carousel.html.erb (4.9ms)
+  Rendered landings/index.html.erb within layouts/application (7.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (3.7ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-16 11:06:25 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:49
+  [1m[36mCartItem Load (113.6ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/helpers/carts_helper.rb:5
+  Rendering carts/show.js.erb
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_cart.html.erb:7
+  Rendered application/_cart.html.erb (4.2ms)
+  Rendered carts/show.js.erb (22.2ms)
+Completed 200 OK in 197ms (Views: 26.2ms | ActiveRecord: 121.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-16 11:07:32 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/_call_to_action.html.erb (0.2ms)
+  Rendered landings/_carousel.html.erb (7.1ms)
+  Rendered landings/index.html.erb within layouts/application (9.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (3.8ms)
+Completed 200 OK in 42ms (Views: 40.2ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-03-16 11:07:34 +0100
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XOwbnpl3GWw9gxuUgiDRcMmwWNaZuQHbwoA5blmo7w7KpVeRTih1J720HWL3gyX6fLtJAsIWLokXZ52IQJXQ2w=="}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 112ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-16 11:07:34 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/_call_to_action.html.erb (0.3ms)
+  Rendered landings/_carousel.html.erb (6.8ms)
+  Rendered landings/index.html.erb within layouts/application (8.6ms)
+  Rendered application/_nav.html.erb (1.5ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:07:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"b7E/EGOhB+sA4VOAF96lLzzwPySM/acKQjdgSBkh1mdppdac31RXeTpxqzXpd/W0nykGh17ikNAfok1EKyAKtQ=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Missing partial devise/sessions/_login, devise/_login, application/_login with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/odin/Desktop/🎲/CHATONS_project/app/views"
+  * "/home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views"
+):
+    1: <%= render 'login' %>
+  
+app/views/devise/sessions/new.html.erb:1:in `_app_views_devise_sessions_new_html_erb___1755240599926335497_82400'
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:08:07 +0100
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"b7E/EGOhB+sA4VOAF96lLzzwPySM/acKQjdgSBkh1mdppdac31RXeTpxqzXpd/W0nykGh17ikNAfok1EKyAKtQ=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered application/_login.html.erb (19.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.8ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 85ms (Views: 81.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:09:13 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered application/_login.html.erb (9.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.1ms)
+  Rendered application/_nav.html.erb (1.5ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:09:35 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered application/_login.html.erb (19.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.1ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 83ms (Views: 78.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:10:07 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (2.1ms)
+  Rendered application/_login.html.erb (20.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.1ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 87ms (Views: 84.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:10:39 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered application/_login.html.erb (13.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.5ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 54ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:11:41 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered application/_login.html.erb (18.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.1ms)
+  Rendered application/_nav.html.erb (1.7ms)
+Completed 200 OK in 287ms (Views: 285.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:12:19 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered application/_login.html.erb (19.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.2ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 180ms (Views: 178.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:13:04 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered application/_login.html.erb (10.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.1ms)
+  Rendered application/_nav.html.erb (1.3ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:13:30 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered application/_login.html.erb (12.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.0ms)
+  Rendered application/_nav.html.erb (1.2ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:18:06 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered application/_login.html.erb (13.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.7ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:19:14 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered application/_login.html.erb (20.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.2ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 189ms (Views: 187.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:19:43 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered application/_login.html.erb (14.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.6ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 61ms (Views: 59.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:19:50 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered application/_login.html.erb (19.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.2ms)
+  Rendered application/_nav.html.erb (1.5ms)
+Completed 200 OK in 86ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:20:28 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered application/_login.html.erb (13.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.1ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:20:45 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered application/_login.html.erb (12.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.8ms)
+  Rendered application/_nav.html.erb (1.2ms)
+Completed 200 OK in 54ms (Views: 52.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:20:53 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.6ms)
+  Rendered application/_login.html.erb (19.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.5ms)
+  Rendered application/_nav.html.erb (1.3ms)
+Completed 200 OK in 71ms (Views: 68.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:21:06 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered application/_login.html.erb (13.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.1ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:22:36 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered application/_login.html.erb (21.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (25.2ms)
+  Rendered application/_nav.html.erb (1.2ms)
+Completed 200 OK in 77ms (Views: 74.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:22:43 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered application/_login.html.erb (12.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.3ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:22:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered application/_login.html.erb (14.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.6ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 56ms (Views: 54.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:23:09 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered application/_login.html.erb (16.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.8ms)
+  Rendered application/_nav.html.erb (1.2ms)
+Completed 200 OK in 64ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:23:25 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered application/_login.html.erb (14.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.1ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 57ms (Views: 56.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:23:47 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered application/_login.html.erb (13.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.8ms)
+  Rendered application/_nav.html.erb (1.9ms)
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:24:07 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (2.7ms)
+  Rendered application/_login.html.erb (22.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.5ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:24:34 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered application/_login.html.erb (12.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.2ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 53ms (Views: 51.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:24:56 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered application/_login.html.erb (19.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.4ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:26:39 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered application/_login.html.erb (13.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.3ms)
+  Rendered application/_nav.html.erb (1.9ms)
+Completed 200 OK in 181ms (Views: 179.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:26:58 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (2.1ms)
+  Rendered application/_login.html.erb (12.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.7ms)
+  Rendered application/_nav.html.erb (1.2ms)
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:27:12 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.7ms)
+  Rendered application/_login.html.erb (9.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.5ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:27:35 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (7.1ms)
+  Rendered application/_login.html.erb (16.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.6ms)
+  Rendered application/_nav.html.erb (1.4ms)
+Completed 200 OK in 59ms (Views: 52.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:27:44 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered application/_login.html.erb (17.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.9ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 96ms (Views: 93.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:28:01 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered application/_login.html.erb (11.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.4ms)
+  Rendered application/_nav.html.erb (1.6ms)
+Completed 200 OK in 58ms (Views: 56.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:35:15 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered application/_login.html.erb (12.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.7ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:35:25 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (2.0ms)
+  Rendered application/_login.html.erb (10.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (12.9ms)
+  Rendered application/_nav.html.erb (1.7ms)
+Completed 200 OK in 66ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:35:29 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered application/_login.html.erb (13.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.4ms)
+  Rendered application/_nav.html.erb (1.2ms)
+Completed 200 OK in 62ms (Views: 60.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:35:47 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered application/_login.html.erb (14.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.1ms)
+  Rendered application/_nav.html.erb (1.4ms)
+Completed 200 OK in 68ms (Views: 66.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:35:59 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered application/_login.html.erb (10.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (14.0ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 77ms (Views: 74.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:36:08 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.5ms)
+  Rendered application/_login.html.erb (21.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.6ms)
+  Rendered application/_nav.html.erb (2.8ms)
+Completed 200 OK in 90ms (Views: 88.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:36:21 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (2.8ms)
+  Rendered application/_login.html.erb (19.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.6ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 96ms (Views: 92.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:37:04 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered application/_login.html.erb (19.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (22.7ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 55ms (Views: 53.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:37:15 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.3ms)
+  Rendered application/_login.html.erb (11.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.4ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:37:23 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (3.5ms)
+  Rendered application/_login.html.erb (21.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (24.2ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 85ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:39:39 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered application/_login.html.erb (13.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.1ms)
+  Rendered application/_nav.html.erb (1.3ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:42:38 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (2.3ms)
+  Rendered application/_login.html.erb (20.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (23.2ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:44:51 +0100
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered application/_login.html.erb (13.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.3ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-16 11:44:54 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.9ms)
+  Rendered application/_sign_up.html.erb (42.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (60.7ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 101ms (Views: 99.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-16 11:45:24 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered application/_sign_up.html.erb (9.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (11.4ms)
+  Rendered application/_nav.html.erb (1.3ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-16 11:46:00 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.2ms)
+  Rendered application/_sign_up.html.erb (10.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.4ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 54ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:46:24 +0100
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"NxzDKyYFbhi2PTSV6oGHy+JUKaIv/wiuqZwX6IOjXeoxCCqnmvA+ioytzCAUKNdQQY0QAf3gP3T0CTrksaKBOA=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered application/_login.html.erb (14.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (17.2ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-03-16 11:46:27 +0100
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.1ms)
+  Rendered application/_sign_up.html.erb (14.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (17.5ms)
+  Rendered application/_nav.html.erb (1.1ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:54:51 +0100
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"ALNKEnbdCBk31BgzM49CxmfeuAPNfCcEGRrb8zg7czcGp6OeyihYiw1E4IbNJhJdxAeBoB9jEN5Ej/b/Cjqv5Q=="}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered /home/odin/.rvm/gems/ruby-2.7.4/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (1.4ms)
+  Rendered application/_login.html.erb (11.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.3ms)
+  Rendered application/_nav.html.erb (1.0ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-03-16 11:54:57 +0100
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6UlNQHKjicihzFBMf28/qH/h47iz9w0KCVR6LVFRc6vvXaTMzlbZWptcqPmBxm8z3DjaG2HoOtBUwVchY1CveQ==", "user"=>{"email"=>"adrien.benaceur@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "adrien.benaceur@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 235ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-16 11:54:57 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/_call_to_action.html.erb (0.6ms)
+  Rendered landings/_carousel.html.erb (3.8ms)
+  Rendered landings/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (2.8ms)
+Completed 200 OK in 41ms (Views: 38.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-16 11:55:00 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/_call_to_action.html.erb (0.3ms)
+  Rendered landings/_carousel.html.erb (7.6ms)
+  Rendered landings/index.html.erb within layouts/application (11.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (2.7ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-16 11:55:02 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/_call_to_action.html.erb (0.6ms)
+  Rendered landings/_carousel.html.erb (6.1ms)
+  Rendered landings/index.html.erb within layouts/application (14.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (2.7ms)
+Completed 200 OK in 85ms (Views: 82.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-16 11:55:03 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/_call_to_action.html.erb (1.1ms)
+  Rendered landings/_carousel.html.erb (13.6ms)
+  Rendered landings/index.html.erb within layouts/application (26.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (2.4ms)
+Completed 200 OK in 68ms (Views: 63.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2022-03-16 11:55:04 +0100
+Processing by LandingsController#index as HTML
+  Rendering landings/index.html.erb within layouts/application
+  Rendered landings/_call_to_action.html.erb (0.4ms)
+  Rendered landings/_carousel.html.erb (6.6ms)
+  Rendered landings/index.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_nav.html.erb:15
+  Rendered application/_nav.html.erb (5.2ms)
+Completed 200 OK in 57ms (Views: 54.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/panier/1" for 127.0.0.1 at 2022-03-16 11:55:05 +0100
+Processing by CartsController#show as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/carts_controller.rb:49
+  [1m[36mCartItem Load (1.0ms)[0m  [1m[34mSELECT "cart_items".* FROM "cart_items"[0m
+  ↳ app/helpers/carts_helper.rb:5
+  Rendering carts/show.js.erb
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/application/_cart.html.erb:7
+  Rendered application/_cart.html.erb (4.5ms)
+  Rendered carts/show.js.erb (7.9ms)
+Completed 200 OK in 22ms (Views: 11.1ms | ActiveRecord: 2.0ms)
+
+

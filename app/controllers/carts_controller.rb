@@ -1,5 +1,6 @@
 class CartsController < ApplicationController
   include CartsHelper
+  before_action :authenticate_user
 
   def index
   end
@@ -29,6 +30,9 @@ class CartsController < ApplicationController
     end
   end
 
+  def destroy
+    
+  end
   private
 
   def find_price
@@ -43,7 +47,7 @@ class CartsController < ApplicationController
 
   def authenticate_user
     unless (user_signed_in?)
-      redirect_to current_user, format: 'js'
+      redirect_to user_session_path
     end
   end
 end
