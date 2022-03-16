@@ -5,6 +5,7 @@ class CartsController < ApplicationController
   end
 
   def create
+    :authenticate_user
     @cart_item = CartItem.new(permit_params)
     if @cart_item.save
       redirect_to '/'
@@ -40,4 +41,9 @@ class CartsController < ApplicationController
     params.permit(:item_id, :user_id, :quantity, :price)
   end
 
+  def authenticate_user
+    unless (user_signed_in?)
+      redirect_to current_user, format: 'js'
+    end
+  end
 end

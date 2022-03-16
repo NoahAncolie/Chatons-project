@@ -12,7 +12,7 @@
                     <%= form.label "quantity" %>
                     <%= form.hidden_field :item_id, value: item.id %>
                     <%= form.number_field :quantity, value: 1, in: 1.0..1000.0, step: 1,class: "form-control"%><br>
-                    <%= form.submit "Ajouter au Panier", class: "btn btn-outline-primary" %>
+                    <%= form.submit "Ajouter au Panier", class: "btn btn-warning" %>
                 <% end %>
                 <%= link_to "Acheter cet article", class: "btn" %>
             </div>
