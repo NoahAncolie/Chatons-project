@@ -1,18 +1,12 @@
 class CartsController < ApplicationController
   include CartsHelper
-<<<<<<< HEAD
-=======
   before_action :authenticate_user
->>>>>>> cats-shop
 
   def index
   end
 
   def create
-<<<<<<< HEAD
-=======
     :authenticate_user
->>>>>>> cats-shop
     @cart_item = CartItem.new(permit_params)
     if @cart_item.save
       redirect_to '/'
@@ -36,12 +30,6 @@ class CartsController < ApplicationController
     end
   end
 
-<<<<<<< HEAD
-  private
-
-  def find_price
-    return Item.find(params[:item_id].to_i).price * params[:quantity].to_i
-=======
   def destroy
     
   end
@@ -61,7 +49,6 @@ class CartsController < ApplicationController
     unless (user_signed_in?)
       redirect_to user_session_path
     end
->>>>>>> cats-shop
   end
 
   def permit_params

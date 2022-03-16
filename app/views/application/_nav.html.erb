@@ -1,0 +1,46 @@
+      <div class="navbar">
+          <ul>
+        <li class="nav-item">
+          <a class="nav-link active" href="<%= items_path %>">Pictures
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Cart", cart_path(current_user.id), method: :get, remote: true, class: "nav-link" %>
+        </li>
+        <% end %>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact#index">Contact</a>
+      
+              </li>
+        <li class="nav-item dropdown">
+          <% if user_signed_in? %>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">me : <%= current_user.username if current_user.username %></a>
+          <% else %>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">User</a>
+          <% end %>
+          <div class="dropdown-menu">
+          <% if user_signed_in? %>
+            <a class="dropdown-item" href="#">Profile</a>
+          <% else %>
+              <%= link_to "Sign in", new_user_session_path, method: :get,
+            class: "dropdown-item" %>
+          <% end %>
+            <div class="dropdown-divider"></div>
+            <% unless user_signed_in? %>
+                <a class="dropdown-item" href="<%= new_user_registration_path %>">Sign up</a>
+            <% else %>
+            <%= link_to "Sign out", destroy_user_session_path, method: :delete,
+            class: "dropdown-item" %>
+            <% end %>
+            </div>
+        </li>
+        <ul>
+      </div>
+    </div>
+
+
