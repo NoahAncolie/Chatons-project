@@ -1,3 +1,15 @@
 <h1>Carts#show</h1>
 <p>Find me in app/views/carts/show.html.erb</p>
-<body>
+<div class="cart-body">
+    <div class="cart-title">
+        <h4>Panier</h4>
+    </div>
+    <div class="cart-elements">
+        <% @cart.each do |item| %>
+            <a href="<%= item_path(item.item_id) %>"><%= Item.find(item.item_id).name %><br>quantity : <%= item.quantity %><br>price : <%= item.price %></a>
+        <% end %>
+        <div class="bottom-payment">
+            <%= link_to "Acheter", "/paiement/new" %>
+        </div>
+    </div>
+</div>

@@ -12,6 +12,7 @@
  *
  *= require cart
  *= require form-friendly
+ *= require items
  */
 
 body {
