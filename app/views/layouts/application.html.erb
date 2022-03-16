@@ -11,8 +11,8 @@
   </head>
 
   <body>
-    <%= render 'nav' unless @disable_nav%>
-
+    <%= render 'nav' unless @disable_nav %>
+    <%= render 'footer' unless @disable_nav %>
     <%= yield %>
   </body>
 
