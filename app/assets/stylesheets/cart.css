@@ -1,0 +1,48 @@
+.cart-body {
+    position : fixed;
+    top : 70px;
+    right : 30px;
+    width : 200px;
+    height : 400px;
+    background-color : red;
+}
+
+.cart-title {
+    padding : 10px;
+}
+
+.cart-elements {
+    overflow-y : auto;
+    scrollbar-color:  red blue;
+}
+
+.fermer {
+    animation: fermer 1s ease-in-out;
+    height : 0px;
+    overflow-y: hidden;
+}
+
+.ouvrir {
+    animation: ouvrir 1s ease-in-out;
+    height : 270px;
+    overflow-y: hidden;
+}
+
+@keyframes ourvrir {
+    0% { height : 0px; }
+    100% { height : 270px; }
+}
+
+@keyframes fermer {
+    0% { height : 270px; }
+    100% { height : 0px; }
+}
+
+.unfade {
+    animation : 1s unfade ease-in-out;
+}
+
+@keyframes unfade {
+    0% { opacity: 0%; }
+    100% { opacity: 100%; }
+}

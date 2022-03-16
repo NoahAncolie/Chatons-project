@@ -19,4 +19,5 @@ class UserMailer < ApplicationMailer
       @url  = 'https://cat-store-thp.herokuapp.com/'
   
       mail(to: @user.email, subject: 'Vos achats chez CatStore !')
+    end
 end
