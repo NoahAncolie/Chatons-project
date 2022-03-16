@@ -10,5 +10,5 @@ Rails.application.routes.draw do
   end
   resources :carts, only: [:create, :show, :update, :destroy], path: 'panier'
   resources :users, only: [:show, :update, :edit], path: 'profil'
-  resources :charges, only: [:new, :create], path: 'paiement'
+  resources :charges, only: [:new, :create]
 end
