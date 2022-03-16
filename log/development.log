@@ -13222,3 +13222,1541 @@ Processing by ActiveStorage::DiskController#show as JPEG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
 
 
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+[36m  Disk Storage (48.5ms) [0m[32mUploaded file to key: zzpEBXr9qDPtwtCXb3o4W3iC (checksum: f11aSlaPpjPW2ijC+yjKSQ==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (76.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "zzpEBXr9qDPtwtCXb3o4W3iC"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 38250], ["checksum", "f11aSlaPpjPW2ijC+yjKSQ=="], ["created_at", "2022-03-16 18:27:13.783266"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (67.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (1.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:27:13.950564"], ["updated_at", "2022-03-16 18:27:13.950564"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (31.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 12], ["blob_id", 12], ["created_at", "2022-03-16 18:27:13.954793"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:27:13.988180"], ["id", 12]]
+  ↳ db/seeds.rb:14
+  [1m[35m (28.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a2bdd99a-f94e-4353-af4d-cf0bf3591091] Performing ActiveStorage::AnalyzeJob (Job ID: a2bdd99a-f94e-4353-af4d-cf0bf3591091) from Inline(default) with arguments: #<GlobalID:0x000056490ed20200 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/12>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a2bdd99a-f94e-4353-af4d-cf0bf3591091] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: zzpEBXr9qDPtwtCXb3o4W3iC[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a2bdd99a-f94e-4353-af4d-cf0bf3591091] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a2bdd99a-f94e-4353-af4d-cf0bf3591091]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a2bdd99a-f94e-4353-af4d-cf0bf3591091]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a2bdd99a-f94e-4353-af4d-cf0bf3591091]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a2bdd99a-f94e-4353-af4d-cf0bf3591091]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a2bdd99a-f94e-4353-af4d-cf0bf3591091]   [1m[35m (34.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a2bdd99a-f94e-4353-af4d-cf0bf3591091]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a2bdd99a-f94e-4353-af4d-cf0bf3591091] Performed ActiveStorage::AnalyzeJob (Job ID: a2bdd99a-f94e-4353-af4d-cf0bf3591091) from Inline(default) in 1409.48ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: a2bdd99a-f94e-4353-af4d-cf0bf3591091) to Inline(default) with arguments: #<GlobalID:0x00005649113fad08 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/12>>
+[36m  Disk Storage (26.1ms) [0m[32mUploaded file to key: D5uTRa2JVuVBYKTFMFPbgaDY (checksum: ZOZLsYodIDC+6V5qLL8KLA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "D5uTRa2JVuVBYKTFMFPbgaDY"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 39378], ["checksum", "ZOZLsYodIDC+6V5qLL8KLA=="], ["created_at", "2022-03-16 18:27:15.724361"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (37.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:27:15.765915"], ["updated_at", "2022-03-16 18:27:15.765915"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 13], ["blob_id", 13], ["created_at", "2022-03-16 18:27:15.768429"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:27:15.770643"], ["id", 13]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c] Performing ActiveStorage::AnalyzeJob (Job ID: 0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c) from Inline(default) with arguments: #<GlobalID:0x0000564911474090 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/13>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: D5uTRa2JVuVBYKTFMFPbgaDY[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 13]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c]   [1m[35m (30.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c] Performed ActiveStorage::AnalyzeJob (Job ID: 0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c) from Inline(default) in 55.08ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 0d3f57ee-a1c7-4e70-baa3-c265b7d31c7c) to Inline(default) with arguments: #<GlobalID:0x00005649114a5528 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/13>>
+[36m  Disk Storage (21.8ms) [0m[32mUploaded file to key: hyUexMWAS5RakxN65zWBenSz (checksum: erR0GVANxFhsRwBckVR/PQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "hyUexMWAS5RakxN65zWBenSz"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 62683], ["checksum", "erR0GVANxFhsRwBckVR/PQ=="], ["created_at", "2022-03-16 18:27:15.892899"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (32.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:27:15.929132"], ["updated_at", "2022-03-16 18:27:15.929132"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 14], ["blob_id", 14], ["created_at", "2022-03-16 18:27:15.930722"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.3ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:27:15.932000"], ["id", 14]]
+  ↳ db/seeds.rb:14
+  [1m[35m (29.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9cada95c-8d9a-4299-ad48-9b27510d5105] Performing ActiveStorage::AnalyzeJob (Job ID: 9cada95c-8d9a-4299-ad48-9b27510d5105) from Inline(default) with arguments: #<GlobalID:0x0000564911516908 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/14>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9cada95c-8d9a-4299-ad48-9b27510d5105] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: hyUexMWAS5RakxN65zWBenSz[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9cada95c-8d9a-4299-ad48-9b27510d5105] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9cada95c-8d9a-4299-ad48-9b27510d5105]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9cada95c-8d9a-4299-ad48-9b27510d5105]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9cada95c-8d9a-4299-ad48-9b27510d5105]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 14]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9cada95c-8d9a-4299-ad48-9b27510d5105]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9cada95c-8d9a-4299-ad48-9b27510d5105]   [1m[35m (24.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9cada95c-8d9a-4299-ad48-9b27510d5105]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9cada95c-8d9a-4299-ad48-9b27510d5105] Performed ActiveStorage::AnalyzeJob (Job ID: 9cada95c-8d9a-4299-ad48-9b27510d5105) from Inline(default) in 32.29ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9cada95c-8d9a-4299-ad48-9b27510d5105) to Inline(default) with arguments: #<GlobalID:0x0000564911557d90 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/14>>
+[36m  Disk Storage (1.8ms) [0m[32mUploaded file to key: 9o84eNFK2xxuWXR6h3nEJeCs (checksum: bJu3GvHHq2nGm5anM6MHtA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "9o84eNFK2xxuWXR6h3nEJeCs"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 56743], ["checksum", "bJu3GvHHq2nGm5anM6MHtA=="], ["created_at", "2022-03-16 18:27:16.004172"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:27:16.035654"], ["updated_at", "2022-03-16 18:27:16.035654"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 15], ["blob_id", 15], ["created_at", "2022-03-16 18:27:16.037994"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:27:16.040039"], ["id", 15]]
+  ↳ db/seeds.rb:14
+  [1m[35m (28.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [94fe4f0a-85e4-4d6b-9b5a-aaa12e886580] Performing ActiveStorage::AnalyzeJob (Job ID: 94fe4f0a-85e4-4d6b-9b5a-aaa12e886580) from Inline(default) with arguments: #<GlobalID:0x00005649115cd180 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/15>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [94fe4f0a-85e4-4d6b-9b5a-aaa12e886580] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: 9o84eNFK2xxuWXR6h3nEJeCs[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [94fe4f0a-85e4-4d6b-9b5a-aaa12e886580] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [94fe4f0a-85e4-4d6b-9b5a-aaa12e886580]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [94fe4f0a-85e4-4d6b-9b5a-aaa12e886580]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [94fe4f0a-85e4-4d6b-9b5a-aaa12e886580]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 15]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [94fe4f0a-85e4-4d6b-9b5a-aaa12e886580]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [94fe4f0a-85e4-4d6b-9b5a-aaa12e886580]   [1m[35m (25.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [94fe4f0a-85e4-4d6b-9b5a-aaa12e886580]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [94fe4f0a-85e4-4d6b-9b5a-aaa12e886580] Performed ActiveStorage::AnalyzeJob (Job ID: 94fe4f0a-85e4-4d6b-9b5a-aaa12e886580) from Inline(default) in 32.58ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 94fe4f0a-85e4-4d6b-9b5a-aaa12e886580) to Inline(default) with arguments: #<GlobalID:0x000056491160e5e0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/15>>
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: c6ADwCxoP59pjSZZ1Zbd8RH1 (checksum: gPz9BqYsux6CmiythByzCg==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "c6ADwCxoP59pjSZZ1Zbd8RH1"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 50077], ["checksum", "gPz9BqYsux6CmiythByzCg=="], ["created_at", "2022-03-16 18:27:16.110913"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:27:16.143859"], ["updated_at", "2022-03-16 18:27:16.143859"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 16], ["blob_id", 16], ["created_at", "2022-03-16 18:27:16.146040"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:27:16.148208"], ["id", 16]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0b9e41c7-33a0-446d-9c56-0fe52f029840] Performing ActiveStorage::AnalyzeJob (Job ID: 0b9e41c7-33a0-446d-9c56-0fe52f029840) from Inline(default) with arguments: #<GlobalID:0x000056491168f8e8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/16>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0b9e41c7-33a0-446d-9c56-0fe52f029840] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: c6ADwCxoP59pjSZZ1Zbd8RH1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0b9e41c7-33a0-446d-9c56-0fe52f029840] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0b9e41c7-33a0-446d-9c56-0fe52f029840]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0b9e41c7-33a0-446d-9c56-0fe52f029840]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0b9e41c7-33a0-446d-9c56-0fe52f029840]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 16]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0b9e41c7-33a0-446d-9c56-0fe52f029840]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0b9e41c7-33a0-446d-9c56-0fe52f029840]   [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0b9e41c7-33a0-446d-9c56-0fe52f029840]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0b9e41c7-33a0-446d-9c56-0fe52f029840] Performed ActiveStorage::AnalyzeJob (Job ID: 0b9e41c7-33a0-446d-9c56-0fe52f029840) from Inline(default) in 32.62ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 0b9e41c7-33a0-446d-9c56-0fe52f029840) to Inline(default) with arguments: #<GlobalID:0x00005649116c0dd0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/16>>
+[36m  Disk Storage (1.8ms) [0m[32mUploaded file to key: wvVkzsQsc1B57rDyQjME2mH5 (checksum: tAeJYi7TRrRDRtqxU08qPA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "wvVkzsQsc1B57rDyQjME2mH5"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 100689], ["checksum", "tAeJYi7TRrRDRtqxU08qPA=="], ["created_at", "2022-03-16 18:27:16.237174"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (31.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:27:16.273118"], ["updated_at", "2022-03-16 18:27:16.273118"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 17], ["blob_id", 17], ["created_at", "2022-03-16 18:27:16.275412"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:27:16.277323"], ["id", 17]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1aa53d06-be2e-463a-995c-1ece4c75649b] Performing ActiveStorage::AnalyzeJob (Job ID: 1aa53d06-be2e-463a-995c-1ece4c75649b) from Inline(default) with arguments: #<GlobalID:0x0000564911752140 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/17>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1aa53d06-be2e-463a-995c-1ece4c75649b] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: wvVkzsQsc1B57rDyQjME2mH5[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1aa53d06-be2e-463a-995c-1ece4c75649b] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1aa53d06-be2e-463a-995c-1ece4c75649b]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1aa53d06-be2e-463a-995c-1ece4c75649b]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1aa53d06-be2e-463a-995c-1ece4c75649b]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 17]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1aa53d06-be2e-463a-995c-1ece4c75649b]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1aa53d06-be2e-463a-995c-1ece4c75649b]   [1m[35m (29.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1aa53d06-be2e-463a-995c-1ece4c75649b]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1aa53d06-be2e-463a-995c-1ece4c75649b] Performed ActiveStorage::AnalyzeJob (Job ID: 1aa53d06-be2e-463a-995c-1ece4c75649b) from Inline(default) in 43.38ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 1aa53d06-be2e-463a-995c-1ece4c75649b) to Inline(default) with arguments: #<GlobalID:0x000056491179b5c0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/17>>
+[36m  Disk Storage (0.9ms) [0m[32mUploaded file to key: 2mXevNpbMGUBsDpmac72474V (checksum: mSx9jUehdVX4klrduAjMzQ==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "2mXevNpbMGUBsDpmac72474V"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 67543], ["checksum", "mSx9jUehdVX4klrduAjMzQ=="], ["created_at", "2022-03-16 18:27:16.357142"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (29.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:27:16.391518"], ["updated_at", "2022-03-16 18:27:16.391518"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 18], ["blob_id", 18], ["created_at", "2022-03-16 18:27:16.393788"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:27:16.395749"], ["id", 18]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 18], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be23e53b-de65-48d9-85b4-ae8b180a1366] Performing ActiveStorage::AnalyzeJob (Job ID: be23e53b-de65-48d9-85b4-ae8b180a1366) from Inline(default) with arguments: #<GlobalID:0x0000564911814998 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/18>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be23e53b-de65-48d9-85b4-ae8b180a1366] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: 2mXevNpbMGUBsDpmac72474V[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be23e53b-de65-48d9-85b4-ae8b180a1366] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be23e53b-de65-48d9-85b4-ae8b180a1366]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be23e53b-de65-48d9-85b4-ae8b180a1366]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be23e53b-de65-48d9-85b4-ae8b180a1366]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 18]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be23e53b-de65-48d9-85b4-ae8b180a1366]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be23e53b-de65-48d9-85b4-ae8b180a1366]   [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be23e53b-de65-48d9-85b4-ae8b180a1366]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [be23e53b-de65-48d9-85b4-ae8b180a1366] Performed ActiveStorage::AnalyzeJob (Job ID: be23e53b-de65-48d9-85b4-ae8b180a1366) from Inline(default) in 32.57ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: be23e53b-de65-48d9-85b4-ae8b180a1366) to Inline(default) with arguments: #<GlobalID:0x0000564911859e08 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/18>>
+[36m  Disk Storage (74.9ms) [0m[32mUploaded file to key: CzM4a46wjxquEoQm6CPnofrA (checksum: n3uGAr2Rp2GJBigDWENvmw==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "CzM4a46wjxquEoQm6CPnofrA"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 44502], ["checksum", "n3uGAr2Rp2GJBigDWENvmw=="], ["created_at", "2022-03-16 18:27:16.539611"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (32.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:27:16.576675"], ["updated_at", "2022-03-16 18:27:16.576675"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 19], ["blob_id", 19], ["created_at", "2022-03-16 18:27:16.579029"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:27:16.580992"], ["id", 19]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8887c4b7-fd4f-496d-85b3-4bc41d34724c] Performing ActiveStorage::AnalyzeJob (Job ID: 8887c4b7-fd4f-496d-85b3-4bc41d34724c) from Inline(default) with arguments: #<GlobalID:0x00005649118a8d00 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/19>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8887c4b7-fd4f-496d-85b3-4bc41d34724c] [36m  Disk Storage (19.3ms) [0m[34mDownloaded file from key: CzM4a46wjxquEoQm6CPnofrA[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8887c4b7-fd4f-496d-85b3-4bc41d34724c] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8887c4b7-fd4f-496d-85b3-4bc41d34724c]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8887c4b7-fd4f-496d-85b3-4bc41d34724c]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8887c4b7-fd4f-496d-85b3-4bc41d34724c]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 19]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8887c4b7-fd4f-496d-85b3-4bc41d34724c]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8887c4b7-fd4f-496d-85b3-4bc41d34724c]   [1m[35m (34.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8887c4b7-fd4f-496d-85b3-4bc41d34724c]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8887c4b7-fd4f-496d-85b3-4bc41d34724c] Performed ActiveStorage::AnalyzeJob (Job ID: 8887c4b7-fd4f-496d-85b3-4bc41d34724c) from Inline(default) in 76.59ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 8887c4b7-fd4f-496d-85b3-4bc41d34724c) to Inline(default) with arguments: #<GlobalID:0x00005649118d9108 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/19>>
+[36m  Disk Storage (0.8ms) [0m[32mUploaded file to key: dNnPAFerDEzHyhcp6TujW8qP (checksum: /i+mziSuOGczbsXsRabrGw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "dNnPAFerDEzHyhcp6TujW8qP"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 24729], ["checksum", "/i+mziSuOGczbsXsRabrGw=="], ["created_at", "2022-03-16 18:27:16.702877"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (32.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:27:16.739405"], ["updated_at", "2022-03-16 18:27:16.739405"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 20], ["blob_id", 20], ["created_at", "2022-03-16 18:27:16.741691"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:27:16.743642"], ["id", 20]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ce7c4ec-2421-4240-8e08-9d1796801328] Performing ActiveStorage::AnalyzeJob (Job ID: 7ce7c4ec-2421-4240-8e08-9d1796801328) from Inline(default) with arguments: #<GlobalID:0x00005649118448a0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/20>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ce7c4ec-2421-4240-8e08-9d1796801328] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: dNnPAFerDEzHyhcp6TujW8qP[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ce7c4ec-2421-4240-8e08-9d1796801328] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ce7c4ec-2421-4240-8e08-9d1796801328]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ce7c4ec-2421-4240-8e08-9d1796801328]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ce7c4ec-2421-4240-8e08-9d1796801328]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 20]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ce7c4ec-2421-4240-8e08-9d1796801328]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ce7c4ec-2421-4240-8e08-9d1796801328]   [1m[35m (28.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ce7c4ec-2421-4240-8e08-9d1796801328]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7ce7c4ec-2421-4240-8e08-9d1796801328] Performed ActiveStorage::AnalyzeJob (Job ID: 7ce7c4ec-2421-4240-8e08-9d1796801328) from Inline(default) in 43.91ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 7ce7c4ec-2421-4240-8e08-9d1796801328) to Inline(default) with arguments: #<GlobalID:0x0000564911805cb8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/20>>
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+[36m  Disk Storage (0.7ms) [0m[32mUploaded file to key: VpFHQWFdzBPNEv3L8cqGVebu (checksum: f11aSlaPpjPW2ijC+yjKSQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "VpFHQWFdzBPNEv3L8cqGVebu"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 38250], ["checksum", "f11aSlaPpjPW2ijC+yjKSQ=="], ["created_at", "2022-03-16 18:28:11.826885"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (50.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:11.899753"], ["updated_at", "2022-03-16 18:28:11.899753"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (1.0ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 21], ["blob_id", 21], ["created_at", "2022-03-16 18:28:11.902764"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.6ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:11.905502"], ["id", 21]]
+  ↳ db/seeds.rb:14
+  [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38cd008c-a210-4456-8b4a-9c34e7598c9d] Performing ActiveStorage::AnalyzeJob (Job ID: 38cd008c-a210-4456-8b4a-9c34e7598c9d) from Inline(default) with arguments: #<GlobalID:0x0000559c904f1140 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/21>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38cd008c-a210-4456-8b4a-9c34e7598c9d] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: VpFHQWFdzBPNEv3L8cqGVebu[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38cd008c-a210-4456-8b4a-9c34e7598c9d] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38cd008c-a210-4456-8b4a-9c34e7598c9d]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38cd008c-a210-4456-8b4a-9c34e7598c9d]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38cd008c-a210-4456-8b4a-9c34e7598c9d]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 21]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38cd008c-a210-4456-8b4a-9c34e7598c9d]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38cd008c-a210-4456-8b4a-9c34e7598c9d]   [1m[35m (21.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38cd008c-a210-4456-8b4a-9c34e7598c9d]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [38cd008c-a210-4456-8b4a-9c34e7598c9d] Performed ActiveStorage::AnalyzeJob (Job ID: 38cd008c-a210-4456-8b4a-9c34e7598c9d) from Inline(default) in 1373.28ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 38cd008c-a210-4456-8b4a-9c34e7598c9d) to Inline(default) with arguments: #<GlobalID:0x0000559c92c0a9e8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/21>>
+[36m  Disk Storage (1.1ms) [0m[32mUploaded file to key: HKZofAU4qukEJxGTwFvJacTY (checksum: ZOZLsYodIDC+6V5qLL8KLA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "HKZofAU4qukEJxGTwFvJacTY"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 39378], ["checksum", "ZOZLsYodIDC+6V5qLL8KLA=="], ["created_at", "2022-03-16 18:28:13.331465"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (30.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:13.365332"], ["updated_at", "2022-03-16 18:28:13.365332"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 22], ["blob_id", 22], ["created_at", "2022-03-16 18:28:13.366912"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.3ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:13.368344"], ["id", 22]]
+  ↳ db/seeds.rb:14
+  [1m[35m (29.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62ac4a63-548b-4bec-8bbc-340392f68ec7] Performing ActiveStorage::AnalyzeJob (Job ID: 62ac4a63-548b-4bec-8bbc-340392f68ec7) from Inline(default) with arguments: #<GlobalID:0x0000559c92c87d58 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/22>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62ac4a63-548b-4bec-8bbc-340392f68ec7] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: HKZofAU4qukEJxGTwFvJacTY[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62ac4a63-548b-4bec-8bbc-340392f68ec7] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62ac4a63-548b-4bec-8bbc-340392f68ec7]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62ac4a63-548b-4bec-8bbc-340392f68ec7]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62ac4a63-548b-4bec-8bbc-340392f68ec7]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 22]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62ac4a63-548b-4bec-8bbc-340392f68ec7]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62ac4a63-548b-4bec-8bbc-340392f68ec7]   [1m[35m (23.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62ac4a63-548b-4bec-8bbc-340392f68ec7]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [62ac4a63-548b-4bec-8bbc-340392f68ec7] Performed ActiveStorage::AnalyzeJob (Job ID: 62ac4a63-548b-4bec-8bbc-340392f68ec7) from Inline(default) in 32.05ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 62ac4a63-548b-4bec-8bbc-340392f68ec7) to Inline(default) with arguments: #<GlobalID:0x0000559c92ca1230 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/22>>
+[36m  Disk Storage (1.8ms) [0m[32mUploaded file to key: Gf5Pxwh33yPGwUpxbkDwX4jB (checksum: erR0GVANxFhsRwBckVR/PQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "Gf5Pxwh33yPGwUpxbkDwX4jB"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 62683], ["checksum", "erR0GVANxFhsRwBckVR/PQ=="], ["created_at", "2022-03-16 18:28:13.440905"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:13.471916"], ["updated_at", "2022-03-16 18:28:13.471916"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 23], ["blob_id", 23], ["created_at", "2022-03-16 18:28:13.473503"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:13.475672"], ["id", 23]]
+  ↳ db/seeds.rb:14
+  [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7b21c757-9312-42c0-ae0e-fe907aa374f7] Performing ActiveStorage::AnalyzeJob (Job ID: 7b21c757-9312-42c0-ae0e-fe907aa374f7) from Inline(default) with arguments: #<GlobalID:0x0000559c92cea610 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/23>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7b21c757-9312-42c0-ae0e-fe907aa374f7] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: Gf5Pxwh33yPGwUpxbkDwX4jB[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7b21c757-9312-42c0-ae0e-fe907aa374f7] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7b21c757-9312-42c0-ae0e-fe907aa374f7]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7b21c757-9312-42c0-ae0e-fe907aa374f7]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7b21c757-9312-42c0-ae0e-fe907aa374f7]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 23]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7b21c757-9312-42c0-ae0e-fe907aa374f7]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7b21c757-9312-42c0-ae0e-fe907aa374f7]   [1m[35m (25.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7b21c757-9312-42c0-ae0e-fe907aa374f7]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7b21c757-9312-42c0-ae0e-fe907aa374f7] Performed ActiveStorage::AnalyzeJob (Job ID: 7b21c757-9312-42c0-ae0e-fe907aa374f7) from Inline(default) in 32.9ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 7b21c757-9312-42c0-ae0e-fe907aa374f7) to Inline(default) with arguments: #<GlobalID:0x0000559c92d1fa68 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/23>>
+[36m  Disk Storage (48.4ms) [0m[32mUploaded file to key: sNpwqm31ft69vNyPxMx6yCxt (checksum: bJu3GvHHq2nGm5anM6MHtA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "sNpwqm31ft69vNyPxMx6yCxt"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 56743], ["checksum", "bJu3GvHHq2nGm5anM6MHtA=="], ["created_at", "2022-03-16 18:28:13.594334"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (36.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:13.636641"], ["updated_at", "2022-03-16 18:28:13.636641"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 24], ["blob_id", 24], ["created_at", "2022-03-16 18:28:13.639329"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.7ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:13.641807"], ["id", 24]]
+  ↳ db/seeds.rb:14
+  [1m[35m (25.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06260076-5808-498b-b5cd-ba00fc51ee97] Performing ActiveStorage::AnalyzeJob (Job ID: 06260076-5808-498b-b5cd-ba00fc51ee97) from Inline(default) with arguments: #<GlobalID:0x0000559c92d94e30 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/24>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06260076-5808-498b-b5cd-ba00fc51ee97] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: sNpwqm31ft69vNyPxMx6yCxt[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06260076-5808-498b-b5cd-ba00fc51ee97] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06260076-5808-498b-b5cd-ba00fc51ee97]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06260076-5808-498b-b5cd-ba00fc51ee97]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06260076-5808-498b-b5cd-ba00fc51ee97]   [1m[36mActiveStorage::Blob Update (0.7ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 24]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06260076-5808-498b-b5cd-ba00fc51ee97]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06260076-5808-498b-b5cd-ba00fc51ee97]   [1m[35m (26.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06260076-5808-498b-b5cd-ba00fc51ee97]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [06260076-5808-498b-b5cd-ba00fc51ee97] Performed ActiveStorage::AnalyzeJob (Job ID: 06260076-5808-498b-b5cd-ba00fc51ee97) from Inline(default) in 34.28ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 06260076-5808-498b-b5cd-ba00fc51ee97) to Inline(default) with arguments: #<GlobalID:0x0000559c92dd62e0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/24>>
+[36m  Disk Storage (1.0ms) [0m[32mUploaded file to key: vDUqBvvHQi4E87m62mPuZvjj (checksum: gPz9BqYsux6CmiythByzCg==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "vDUqBvvHQi4E87m62mPuZvjj"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 50077], ["checksum", "gPz9BqYsux6CmiythByzCg=="], ["created_at", "2022-03-16 18:28:13.709723"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (29.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:13.742119"], ["updated_at", "2022-03-16 18:28:13.742119"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 25], ["blob_id", 25], ["created_at", "2022-03-16 18:28:13.743514"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:13.745270"], ["id", 25]]
+  ↳ db/seeds.rb:14
+  [1m[35m (29.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [20070cfc-6d38-447f-b851-2853e12d8287] Performing ActiveStorage::AnalyzeJob (Job ID: 20070cfc-6d38-447f-b851-2853e12d8287) from Inline(default) with arguments: #<GlobalID:0x0000559c92e57610 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/25>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [20070cfc-6d38-447f-b851-2853e12d8287] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: vDUqBvvHQi4E87m62mPuZvjj[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [20070cfc-6d38-447f-b851-2853e12d8287] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [20070cfc-6d38-447f-b851-2853e12d8287]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [20070cfc-6d38-447f-b851-2853e12d8287]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [20070cfc-6d38-447f-b851-2853e12d8287]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 25]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [20070cfc-6d38-447f-b851-2853e12d8287]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [20070cfc-6d38-447f-b851-2853e12d8287]   [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [20070cfc-6d38-447f-b851-2853e12d8287]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [20070cfc-6d38-447f-b851-2853e12d8287] Performed ActiveStorage::AnalyzeJob (Job ID: 20070cfc-6d38-447f-b851-2853e12d8287) from Inline(default) in 34.1ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 20070cfc-6d38-447f-b851-2853e12d8287) to Inline(default) with arguments: #<GlobalID:0x0000559c92e8cab8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/25>>
+[36m  Disk Storage (1.8ms) [0m[32mUploaded file to key: HMdgeXCJ94imF8XkRnEgCpY1 (checksum: tAeJYi7TRrRDRtqxU08qPA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "HMdgeXCJ94imF8XkRnEgCpY1"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 100689], ["checksum", "tAeJYi7TRrRDRtqxU08qPA=="], ["created_at", "2022-03-16 18:28:13.818231"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:13.850527"], ["updated_at", "2022-03-16 18:28:13.850527"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 26], ["blob_id", 26], ["created_at", "2022-03-16 18:28:13.852828"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:13.854866"], ["id", 26]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5dc14c54-6f10-436d-b2c4-968f7bc96049] Performing ActiveStorage::AnalyzeJob (Job ID: 5dc14c54-6f10-436d-b2c4-968f7bc96049) from Inline(default) with arguments: #<GlobalID:0x0000559c92f19e40 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/26>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5dc14c54-6f10-436d-b2c4-968f7bc96049] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: HMdgeXCJ94imF8XkRnEgCpY1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5dc14c54-6f10-436d-b2c4-968f7bc96049] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5dc14c54-6f10-436d-b2c4-968f7bc96049]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5dc14c54-6f10-436d-b2c4-968f7bc96049]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5dc14c54-6f10-436d-b2c4-968f7bc96049]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 26]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5dc14c54-6f10-436d-b2c4-968f7bc96049]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5dc14c54-6f10-436d-b2c4-968f7bc96049]   [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5dc14c54-6f10-436d-b2c4-968f7bc96049]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5dc14c54-6f10-436d-b2c4-968f7bc96049] Performed ActiveStorage::AnalyzeJob (Job ID: 5dc14c54-6f10-436d-b2c4-968f7bc96049) from Inline(default) in 32.42ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5dc14c54-6f10-436d-b2c4-968f7bc96049) to Inline(default) with arguments: #<GlobalID:0x0000559c92f63270 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/26>>
+[36m  Disk Storage (1.6ms) [0m[32mUploaded file to key: AZ6ZF4iS7fXJ9ospjKWh1FY1 (checksum: mSx9jUehdVX4klrduAjMzQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "AZ6ZF4iS7fXJ9ospjKWh1FY1"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 67543], ["checksum", "mSx9jUehdVX4klrduAjMzQ=="], ["created_at", "2022-03-16 18:28:13.924823"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:13.957899"], ["updated_at", "2022-03-16 18:28:13.957899"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 27], ["blob_id", 27], ["created_at", "2022-03-16 18:28:13.960711"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:13.962676"], ["id", 27]]
+  ↳ db/seeds.rb:14
+  [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a47da567-e3a4-48bd-a736-0b48cc7e3676] Performing ActiveStorage::AnalyzeJob (Job ID: a47da567-e3a4-48bd-a736-0b48cc7e3676) from Inline(default) with arguments: #<GlobalID:0x0000559c92fdc648 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/27>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a47da567-e3a4-48bd-a736-0b48cc7e3676] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: AZ6ZF4iS7fXJ9ospjKWh1FY1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a47da567-e3a4-48bd-a736-0b48cc7e3676] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a47da567-e3a4-48bd-a736-0b48cc7e3676]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a47da567-e3a4-48bd-a736-0b48cc7e3676]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a47da567-e3a4-48bd-a736-0b48cc7e3676]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 27]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a47da567-e3a4-48bd-a736-0b48cc7e3676]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a47da567-e3a4-48bd-a736-0b48cc7e3676]   [1m[35m (24.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a47da567-e3a4-48bd-a736-0b48cc7e3676]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a47da567-e3a4-48bd-a736-0b48cc7e3676] Performed ActiveStorage::AnalyzeJob (Job ID: a47da567-e3a4-48bd-a736-0b48cc7e3676) from Inline(default) in 32.63ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: a47da567-e3a4-48bd-a736-0b48cc7e3676) to Inline(default) with arguments: #<GlobalID:0x0000559c93021b08 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/27>>
+[36m  Disk Storage (1.6ms) [0m[32mUploaded file to key: dp4MHNgXjPjhPJj1DuAykZuA (checksum: n3uGAr2Rp2GJBigDWENvmw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "dp4MHNgXjPjhPJj1DuAykZuA"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 44502], ["checksum", "n3uGAr2Rp2GJBigDWENvmw=="], ["created_at", "2022-03-16 18:28:14.057155"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:14.087067"], ["updated_at", "2022-03-16 18:28:14.087067"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 28], ["blob_id", 28], ["created_at", "2022-03-16 18:28:14.089309"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:14.091109"], ["id", 28]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555] Performing ActiveStorage::AnalyzeJob (Job ID: 5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555) from Inline(default) with arguments: #<GlobalID:0x0000559c92fd5898 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/28>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: dp4MHNgXjPjhPJj1DuAykZuA[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 28]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555]   [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555] Performed ActiveStorage::AnalyzeJob (Job ID: 5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555) from Inline(default) in 32.74ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5e3dc0d7-bed4-43f8-8ed7-5f4347a2a555) to Inline(default) with arguments: #<GlobalID:0x0000559c93076ce8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/28>>
+[36m  Disk Storage (34.8ms) [0m[32mUploaded file to key: ewGdLkk7d3vWREX8Nw4V1aWU (checksum: /i+mziSuOGczbsXsRabrGw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "ewGdLkk7d3vWREX8Nw4V1aWU"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 24729], ["checksum", "/i+mziSuOGczbsXsRabrGw=="], ["created_at", "2022-03-16 18:28:14.194216"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:14.238463"], ["updated_at", "2022-03-16 18:28:14.238463"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 29], ["blob_id", 29], ["created_at", "2022-03-16 18:28:14.240680"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:14.242519"], ["id", 29]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1cbf68aa-dd33-4021-b902-8d0ecc7d49fc] Performing ActiveStorage::AnalyzeJob (Job ID: 1cbf68aa-dd33-4021-b902-8d0ecc7d49fc) from Inline(default) with arguments: #<GlobalID:0x0000559c92f88098 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/29>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1cbf68aa-dd33-4021-b902-8d0ecc7d49fc] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: ewGdLkk7d3vWREX8Nw4V1aWU[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1cbf68aa-dd33-4021-b902-8d0ecc7d49fc] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1cbf68aa-dd33-4021-b902-8d0ecc7d49fc]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1cbf68aa-dd33-4021-b902-8d0ecc7d49fc]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1cbf68aa-dd33-4021-b902-8d0ecc7d49fc]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 29]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1cbf68aa-dd33-4021-b902-8d0ecc7d49fc]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1cbf68aa-dd33-4021-b902-8d0ecc7d49fc]   [1m[35m (24.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1cbf68aa-dd33-4021-b902-8d0ecc7d49fc]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1cbf68aa-dd33-4021-b902-8d0ecc7d49fc] Performed ActiveStorage::AnalyzeJob (Job ID: 1cbf68aa-dd33-4021-b902-8d0ecc7d49fc) from Inline(default) in 32.46ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 1cbf68aa-dd33-4021-b902-8d0ecc7d49fc) to Inline(default) with arguments: #<GlobalID:0x0000559c930c14a0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/29>>
+[36m  Disk Storage (9.8ms) [0m[32mUploaded file to key: DvqedQ4iGEs6yDQXX5h3WLCm (checksum: cTlfAhK+ZdNqpDs56RkpOA==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "DvqedQ4iGEs6yDQXX5h3WLCm"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 1628407], ["checksum", "cTlfAhK+ZdNqpDs56RkpOA=="], ["created_at", "2022-03-16 18:28:14.345633"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:14.379177"], ["updated_at", "2022-03-16 18:28:14.379177"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 30], ["blob_id", 30], ["created_at", "2022-03-16 18:28:14.381450"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:14.383790"], ["id", 30]]
+  ↳ db/seeds.rb:14
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2f5892bb-d192-4dd9-a9e0-e19d09224598] Performing ActiveStorage::AnalyzeJob (Job ID: 2f5892bb-d192-4dd9-a9e0-e19d09224598) from Inline(default) with arguments: #<GlobalID:0x0000559c92ede700 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/30>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2f5892bb-d192-4dd9-a9e0-e19d09224598] [36m  Disk Storage (3.5ms) [0m[34mDownloaded file from key: DvqedQ4iGEs6yDQXX5h3WLCm[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2f5892bb-d192-4dd9-a9e0-e19d09224598] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2f5892bb-d192-4dd9-a9e0-e19d09224598]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2f5892bb-d192-4dd9-a9e0-e19d09224598]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2f5892bb-d192-4dd9-a9e0-e19d09224598]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 30]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2f5892bb-d192-4dd9-a9e0-e19d09224598]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2f5892bb-d192-4dd9-a9e0-e19d09224598]   [1m[35m (32.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2f5892bb-d192-4dd9-a9e0-e19d09224598]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2f5892bb-d192-4dd9-a9e0-e19d09224598] Performed ActiveStorage::AnalyzeJob (Job ID: 2f5892bb-d192-4dd9-a9e0-e19d09224598) from Inline(default) in 43.78ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 2f5892bb-d192-4dd9-a9e0-e19d09224598) to Inline(default) with arguments: #<GlobalID:0x0000559c92e8fb00 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/30>>
+[36m  Disk Storage (1.6ms) [0m[32mUploaded file to key: jLM3gZ9757DiGSLAKULNQMwW (checksum: +k7z3pVlXesD7aJPrJtuow==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "jLM3gZ9757DiGSLAKULNQMwW"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 55283], ["checksum", "+k7z3pVlXesD7aJPrJtuow=="], ["created_at", "2022-03-16 18:28:14.464616"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:14.497550"], ["updated_at", "2022-03-16 18:28:14.497550"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 31], ["blob_id", 31], ["created_at", "2022-03-16 18:28:14.499829"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:14.501715"], ["id", 31]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9f01b4cf-6085-40e7-94c9-a000ccadacfd] Performing ActiveStorage::AnalyzeJob (Job ID: 9f01b4cf-6085-40e7-94c9-a000ccadacfd) from Inline(default) with arguments: #<GlobalID:0x0000559c92e18e60 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/31>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9f01b4cf-6085-40e7-94c9-a000ccadacfd] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: jLM3gZ9757DiGSLAKULNQMwW[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9f01b4cf-6085-40e7-94c9-a000ccadacfd] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9f01b4cf-6085-40e7-94c9-a000ccadacfd]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9f01b4cf-6085-40e7-94c9-a000ccadacfd]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9f01b4cf-6085-40e7-94c9-a000ccadacfd]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 31]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9f01b4cf-6085-40e7-94c9-a000ccadacfd]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9f01b4cf-6085-40e7-94c9-a000ccadacfd]   [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9f01b4cf-6085-40e7-94c9-a000ccadacfd]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9f01b4cf-6085-40e7-94c9-a000ccadacfd] Performed ActiveStorage::AnalyzeJob (Job ID: 9f01b4cf-6085-40e7-94c9-a000ccadacfd) from Inline(default) in 32.89ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9f01b4cf-6085-40e7-94c9-a000ccadacfd) to Inline(default) with arguments: #<GlobalID:0x0000559c92dd6290 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/31>>
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+[36m  Disk Storage (0.8ms) [0m[32mUploaded file to key: 64M7jfWQFLesL8T1sEv4RLCe (checksum: f11aSlaPpjPW2ijC+yjKSQ==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "64M7jfWQFLesL8T1sEv4RLCe"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 38250], ["checksum", "f11aSlaPpjPW2ijC+yjKSQ=="], ["created_at", "2022-03-16 18:28:52.001829"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (25.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:52.042888"], ["updated_at", "2022-03-16 18:28:52.042888"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 32], ["blob_id", 32], ["created_at", "2022-03-16 18:28:52.044435"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.9ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:52.045875"], ["id", 32]]
+  ↳ db/seeds.rb:14
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2dea5fa2-e43c-44ac-9662-37678635a787] Performing ActiveStorage::AnalyzeJob (Job ID: 2dea5fa2-e43c-44ac-9662-37678635a787) from Inline(default) with arguments: #<GlobalID:0x0000555d95ecfe58 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/32>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2dea5fa2-e43c-44ac-9662-37678635a787] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: 64M7jfWQFLesL8T1sEv4RLCe[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2dea5fa2-e43c-44ac-9662-37678635a787] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2dea5fa2-e43c-44ac-9662-37678635a787]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2dea5fa2-e43c-44ac-9662-37678635a787]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2dea5fa2-e43c-44ac-9662-37678635a787]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 32]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2dea5fa2-e43c-44ac-9662-37678635a787]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2dea5fa2-e43c-44ac-9662-37678635a787]   [1m[35m (83.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2dea5fa2-e43c-44ac-9662-37678635a787]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [2dea5fa2-e43c-44ac-9662-37678635a787] Performed ActiveStorage::AnalyzeJob (Job ID: 2dea5fa2-e43c-44ac-9662-37678635a787) from Inline(default) in 1527.52ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 2dea5fa2-e43c-44ac-9662-37678635a787) to Inline(default) with arguments: #<GlobalID:0x0000555d9931ea60 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/32>>
+[36m  Disk Storage (0.9ms) [0m[32mUploaded file to key: P4NSwyhshmC9R4ajdwkWG4bG (checksum: ZOZLsYodIDC+6V5qLL8KLA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (1.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "P4NSwyhshmC9R4ajdwkWG4bG"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 39378], ["checksum", "ZOZLsYodIDC+6V5qLL8KLA=="], ["created_at", "2022-03-16 18:28:53.629196"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (41.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:53.675087"], ["updated_at", "2022-03-16 18:28:53.675087"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 33], ["blob_id", 33], ["created_at", "2022-03-16 18:28:53.676461"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.2ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:53.677579"], ["id", 33]]
+  ↳ db/seeds.rb:14
+  [1m[35m (30.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b4e3f175-f918-4669-9f12-a7eb823ae60c] Performing ActiveStorage::AnalyzeJob (Job ID: b4e3f175-f918-4669-9f12-a7eb823ae60c) from Inline(default) with arguments: #<GlobalID:0x0000555d9939bdf8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/33>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b4e3f175-f918-4669-9f12-a7eb823ae60c] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: P4NSwyhshmC9R4ajdwkWG4bG[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b4e3f175-f918-4669-9f12-a7eb823ae60c] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b4e3f175-f918-4669-9f12-a7eb823ae60c]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b4e3f175-f918-4669-9f12-a7eb823ae60c]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b4e3f175-f918-4669-9f12-a7eb823ae60c]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 33]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b4e3f175-f918-4669-9f12-a7eb823ae60c]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b4e3f175-f918-4669-9f12-a7eb823ae60c]   [1m[35m (31.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b4e3f175-f918-4669-9f12-a7eb823ae60c]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b4e3f175-f918-4669-9f12-a7eb823ae60c] Performed ActiveStorage::AnalyzeJob (Job ID: b4e3f175-f918-4669-9f12-a7eb823ae60c) from Inline(default) in 45.11ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b4e3f175-f918-4669-9f12-a7eb823ae60c) to Inline(default) with arguments: #<GlobalID:0x0000555d993b52d0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/33>>
+[36m  Disk Storage (12.0ms) [0m[32mUploaded file to key: UymritNUaaKkwJayesjHjBNN (checksum: erR0GVANxFhsRwBckVR/PQ==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "UymritNUaaKkwJayesjHjBNN"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 62683], ["checksum", "erR0GVANxFhsRwBckVR/PQ=="], ["created_at", "2022-03-16 18:28:53.772101"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:53.804417"], ["updated_at", "2022-03-16 18:28:53.804417"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 34], ["blob_id", 34], ["created_at", "2022-03-16 18:28:53.805778"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.2ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:53.806950"], ["id", 34]]
+  ↳ db/seeds.rb:14
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7a16e5c5-b432-4daf-84c8-aee631075254] Performing ActiveStorage::AnalyzeJob (Job ID: 7a16e5c5-b432-4daf-84c8-aee631075254) from Inline(default) with arguments: #<GlobalID:0x0000555d993fe688 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/34>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7a16e5c5-b432-4daf-84c8-aee631075254] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: UymritNUaaKkwJayesjHjBNN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7a16e5c5-b432-4daf-84c8-aee631075254] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7a16e5c5-b432-4daf-84c8-aee631075254]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7a16e5c5-b432-4daf-84c8-aee631075254]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7a16e5c5-b432-4daf-84c8-aee631075254]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 34]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7a16e5c5-b432-4daf-84c8-aee631075254]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7a16e5c5-b432-4daf-84c8-aee631075254]   [1m[35m (29.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7a16e5c5-b432-4daf-84c8-aee631075254]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7a16e5c5-b432-4daf-84c8-aee631075254] Performed ActiveStorage::AnalyzeJob (Job ID: 7a16e5c5-b432-4daf-84c8-aee631075254) from Inline(default) in 34.06ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 7a16e5c5-b432-4daf-84c8-aee631075254) to Inline(default) with arguments: #<GlobalID:0x0000555d9942faf8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/34>>
+[36m  Disk Storage (2.1ms) [0m[32mUploaded file to key: ekT7h7WivLnzUxqPLQTXZqi2 (checksum: bJu3GvHHq2nGm5anM6MHtA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "ekT7h7WivLnzUxqPLQTXZqi2"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 56743], ["checksum", "bJu3GvHHq2nGm5anM6MHtA=="], ["created_at", "2022-03-16 18:28:53.880608"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:53.925467"], ["updated_at", "2022-03-16 18:28:53.925467"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 35], ["blob_id", 35], ["created_at", "2022-03-16 18:28:53.926838"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.2ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:53.927974"], ["id", 35]]
+  ↳ db/seeds.rb:14
+  [1m[35m (74.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e6fba290-0cb7-4d4b-8e56-08d258aa806a] Performing ActiveStorage::AnalyzeJob (Job ID: e6fba290-0cb7-4d4b-8e56-08d258aa806a) from Inline(default) with arguments: #<GlobalID:0x0000555d994a4ec0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/35>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e6fba290-0cb7-4d4b-8e56-08d258aa806a] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: ekT7h7WivLnzUxqPLQTXZqi2[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e6fba290-0cb7-4d4b-8e56-08d258aa806a] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e6fba290-0cb7-4d4b-8e56-08d258aa806a]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e6fba290-0cb7-4d4b-8e56-08d258aa806a]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e6fba290-0cb7-4d4b-8e56-08d258aa806a]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 35]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e6fba290-0cb7-4d4b-8e56-08d258aa806a]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e6fba290-0cb7-4d4b-8e56-08d258aa806a]   [1m[35m (29.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e6fba290-0cb7-4d4b-8e56-08d258aa806a]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e6fba290-0cb7-4d4b-8e56-08d258aa806a] Performed ActiveStorage::AnalyzeJob (Job ID: e6fba290-0cb7-4d4b-8e56-08d258aa806a) from Inline(default) in 33.98ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e6fba290-0cb7-4d4b-8e56-08d258aa806a) to Inline(default) with arguments: #<GlobalID:0x0000555d994e6320 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/35>>
+[36m  Disk Storage (1.0ms) [0m[32mUploaded file to key: edgNi9MX7VNcVJFZxsf25Zze (checksum: gPz9BqYsux6CmiythByzCg==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "edgNi9MX7VNcVJFZxsf25Zze"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 50077], ["checksum", "gPz9BqYsux6CmiythByzCg=="], ["created_at", "2022-03-16 18:28:54.043532"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (29.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:54.078509"], ["updated_at", "2022-03-16 18:28:54.078509"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 36], ["blob_id", 36], ["created_at", "2022-03-16 18:28:54.081078"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:54.083393"], ["id", 36]]
+  ↳ db/seeds.rb:14
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3d283c41-22ab-4ad7-be13-ca4deb91e350] Performing ActiveStorage::AnalyzeJob (Job ID: 3d283c41-22ab-4ad7-be13-ca4deb91e350) from Inline(default) with arguments: #<GlobalID:0x0000555d995676a0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/36>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3d283c41-22ab-4ad7-be13-ca4deb91e350] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: edgNi9MX7VNcVJFZxsf25Zze[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3d283c41-22ab-4ad7-be13-ca4deb91e350] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3d283c41-22ab-4ad7-be13-ca4deb91e350]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3d283c41-22ab-4ad7-be13-ca4deb91e350]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3d283c41-22ab-4ad7-be13-ca4deb91e350]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 36]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3d283c41-22ab-4ad7-be13-ca4deb91e350]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3d283c41-22ab-4ad7-be13-ca4deb91e350]   [1m[35m (32.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3d283c41-22ab-4ad7-be13-ca4deb91e350]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3d283c41-22ab-4ad7-be13-ca4deb91e350] Performed ActiveStorage::AnalyzeJob (Job ID: 3d283c41-22ab-4ad7-be13-ca4deb91e350) from Inline(default) in 43.52ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 3d283c41-22ab-4ad7-be13-ca4deb91e350) to Inline(default) with arguments: #<GlobalID:0x0000555d99598b38 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/36>>
+[36m  Disk Storage (1.1ms) [0m[32mUploaded file to key: TW9YKbP9hYBfkyQnATJmUpfn (checksum: tAeJYi7TRrRDRtqxU08qPA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "TW9YKbP9hYBfkyQnATJmUpfn"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 100689], ["checksum", "tAeJYi7TRrRDRtqxU08qPA=="], ["created_at", "2022-03-16 18:28:54.161547"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:54.195442"], ["updated_at", "2022-03-16 18:28:54.195442"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 37], ["blob_id", 37], ["created_at", "2022-03-16 18:28:54.197346"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:54.199939"], ["id", 37]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8c0c902-5557-4276-9b09-5de136dd92ba] Performing ActiveStorage::AnalyzeJob (Job ID: e8c0c902-5557-4276-9b09-5de136dd92ba) from Inline(default) with arguments: #<GlobalID:0x0000555d99629ef8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/37>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8c0c902-5557-4276-9b09-5de136dd92ba] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: TW9YKbP9hYBfkyQnATJmUpfn[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8c0c902-5557-4276-9b09-5de136dd92ba] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8c0c902-5557-4276-9b09-5de136dd92ba]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8c0c902-5557-4276-9b09-5de136dd92ba]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8c0c902-5557-4276-9b09-5de136dd92ba]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 37]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8c0c902-5557-4276-9b09-5de136dd92ba]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8c0c902-5557-4276-9b09-5de136dd92ba]   [1m[35m (26.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8c0c902-5557-4276-9b09-5de136dd92ba]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e8c0c902-5557-4276-9b09-5de136dd92ba] Performed ActiveStorage::AnalyzeJob (Job ID: e8c0c902-5557-4276-9b09-5de136dd92ba) from Inline(default) in 32.33ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e8c0c902-5557-4276-9b09-5de136dd92ba) to Inline(default) with arguments: #<GlobalID:0x0000555d996733a0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/37>>
+[36m  Disk Storage (1.1ms) [0m[32mUploaded file to key: wXp443F5m5BJCpgkCKHfTj26 (checksum: mSx9jUehdVX4klrduAjMzQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "wXp443F5m5BJCpgkCKHfTj26"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 67543], ["checksum", "mSx9jUehdVX4klrduAjMzQ=="], ["created_at", "2022-03-16 18:28:54.269405"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (30.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:54.302659"], ["updated_at", "2022-03-16 18:28:54.302659"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 38], ["blob_id", 38], ["created_at", "2022-03-16 18:28:54.304125"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.3ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:54.305308"], ["id", 38]]
+  ↳ db/seeds.rb:14
+  [1m[35m (121.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [750e944a-09cd-403a-9ad7-0302eaf35155] Performing ActiveStorage::AnalyzeJob (Job ID: 750e944a-09cd-403a-9ad7-0302eaf35155) from Inline(default) with arguments: #<GlobalID:0x0000555d996ec778 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/38>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [750e944a-09cd-403a-9ad7-0302eaf35155] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: wXp443F5m5BJCpgkCKHfTj26[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [750e944a-09cd-403a-9ad7-0302eaf35155] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [750e944a-09cd-403a-9ad7-0302eaf35155]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [750e944a-09cd-403a-9ad7-0302eaf35155]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [750e944a-09cd-403a-9ad7-0302eaf35155]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 38]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [750e944a-09cd-403a-9ad7-0302eaf35155]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [750e944a-09cd-403a-9ad7-0302eaf35155]   [1m[35m (104.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [750e944a-09cd-403a-9ad7-0302eaf35155]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [750e944a-09cd-403a-9ad7-0302eaf35155] Performed ActiveStorage::AnalyzeJob (Job ID: 750e944a-09cd-403a-9ad7-0302eaf35155) from Inline(default) in 110.79ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 750e944a-09cd-403a-9ad7-0302eaf35155) to Inline(default) with arguments: #<GlobalID:0x0000555d99731c38 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/38>>
+[36m  Disk Storage (39.8ms) [0m[32mUploaded file to key: Fe2k55iev7hGozY2jA2MpVah (checksum: n3uGAr2Rp2GJBigDWENvmw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "Fe2k55iev7hGozY2jA2MpVah"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 44502], ["checksum", "n3uGAr2Rp2GJBigDWENvmw=="], ["created_at", "2022-03-16 18:28:54.583772"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (45.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:54.633212"], ["updated_at", "2022-03-16 18:28:54.633212"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 39], ["blob_id", 39], ["created_at", "2022-03-16 18:28:54.634726"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.3ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:54.635870"], ["id", 39]]
+  ↳ db/seeds.rb:14
+  [1m[35m (29.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3abd5c03-27b4-4ce5-b123-bd978ce75ee9] Performing ActiveStorage::AnalyzeJob (Job ID: 3abd5c03-27b4-4ce5-b123-bd978ce75ee9) from Inline(default) with arguments: #<GlobalID:0x0000555d997b3008 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/39>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3abd5c03-27b4-4ce5-b123-bd978ce75ee9] [36m  Disk Storage (14.5ms) [0m[34mDownloaded file from key: Fe2k55iev7hGozY2jA2MpVah[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3abd5c03-27b4-4ce5-b123-bd978ce75ee9] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3abd5c03-27b4-4ce5-b123-bd978ce75ee9]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3abd5c03-27b4-4ce5-b123-bd978ce75ee9]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3abd5c03-27b4-4ce5-b123-bd978ce75ee9]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 39]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3abd5c03-27b4-4ce5-b123-bd978ce75ee9]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3abd5c03-27b4-4ce5-b123-bd978ce75ee9]   [1m[35m (110.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3abd5c03-27b4-4ce5-b123-bd978ce75ee9]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [3abd5c03-27b4-4ce5-b123-bd978ce75ee9] Performed ActiveStorage::AnalyzeJob (Job ID: 3abd5c03-27b4-4ce5-b123-bd978ce75ee9) from Inline(default) in 129.78ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 3abd5c03-27b4-4ce5-b123-bd978ce75ee9) to Inline(default) with arguments: #<GlobalID:0x0000555d997d5130 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/39>>
+[36m  Disk Storage (0.9ms) [0m[32mUploaded file to key: pXJq1WoLBZLwXKqaPmfwArr3 (checksum: /i+mziSuOGczbsXsRabrGw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "pXJq1WoLBZLwXKqaPmfwArr3"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 24729], ["checksum", "/i+mziSuOGczbsXsRabrGw=="], ["created_at", "2022-03-16 18:28:54.801824"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (34.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:54.839370"], ["updated_at", "2022-03-16 18:28:54.839370"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 40], ["blob_id", 40], ["created_at", "2022-03-16 18:28:54.840742"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.2ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:54.841835"], ["id", 40]]
+  ↳ db/seeds.rb:14
+  [1m[35m (30.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de] Performing ActiveStorage::AnalyzeJob (Job ID: dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de) from Inline(default) with arguments: #<GlobalID:0x0000555d99745080 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/40>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: pXJq1WoLBZLwXKqaPmfwArr3[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de]   [1m[36mActiveStorage::Blob Update (2.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 40]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de]   [1m[35m (24.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de] Performed ActiveStorage::AnalyzeJob (Job ID: dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de) from Inline(default) in 32.68ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: dc948ab1-7734-4d1c-ba1c-fcfbfe7d20de) to Inline(default) with arguments: #<GlobalID:0x0000555d996f5d28 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/40>>
+[36m  Disk Storage (5.6ms) [0m[32mUploaded file to key: 1xkP67zQyPTRLBq31oC198Zc (checksum: cTlfAhK+ZdNqpDs56RkpOA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "1xkP67zQyPTRLBq31oC198Zc"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 1628407], ["checksum", "cTlfAhK+ZdNqpDs56RkpOA=="], ["created_at", "2022-03-16 18:28:54.921285"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (22.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:54.947788"], ["updated_at", "2022-03-16 18:28:54.947788"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 41], ["blob_id", 41], ["created_at", "2022-03-16 18:28:54.950272"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:54.952261"], ["id", 41]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b7bdf0cc-05bd-430c-85da-4e04cf9c78cb] Performing ActiveStorage::AnalyzeJob (Job ID: b7bdf0cc-05bd-430c-85da-4e04cf9c78cb) from Inline(default) with arguments: #<GlobalID:0x0000555d99673080 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/41>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b7bdf0cc-05bd-430c-85da-4e04cf9c78cb] [36m  Disk Storage (2.6ms) [0m[34mDownloaded file from key: 1xkP67zQyPTRLBq31oC198Zc[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b7bdf0cc-05bd-430c-85da-4e04cf9c78cb] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b7bdf0cc-05bd-430c-85da-4e04cf9c78cb]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b7bdf0cc-05bd-430c-85da-4e04cf9c78cb]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b7bdf0cc-05bd-430c-85da-4e04cf9c78cb]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 41]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b7bdf0cc-05bd-430c-85da-4e04cf9c78cb]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b7bdf0cc-05bd-430c-85da-4e04cf9c78cb]   [1m[35m (24.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b7bdf0cc-05bd-430c-85da-4e04cf9c78cb]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [b7bdf0cc-05bd-430c-85da-4e04cf9c78cb] Performed ActiveStorage::AnalyzeJob (Job ID: b7bdf0cc-05bd-430c-85da-4e04cf9c78cb) from Inline(default) in 32.68ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b7bdf0cc-05bd-430c-85da-4e04cf9c78cb) to Inline(default) with arguments: #<GlobalID:0x0000555d99648538 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/41>>
+[36m  Disk Storage (1.1ms) [0m[32mUploaded file to key: cuMDKuNr55bc54seb9iPZzbU (checksum: +k7z3pVlXesD7aJPrJtuow==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "cuMDKuNr55bc54seb9iPZzbU"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 55283], ["checksum", "+k7z3pVlXesD7aJPrJtuow=="], ["created_at", "2022-03-16 18:28:55.020689"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (30.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:55.053675"], ["updated_at", "2022-03-16 18:28:55.053675"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 42], ["blob_id", 42], ["created_at", "2022-03-16 18:28:55.055015"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.2ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:55.056067"], ["id", 42]]
+  ↳ db/seeds.rb:14
+  [1m[35m (30.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5aebdead-e346-49e6-9f32-3fa002aa4315] Performing ActiveStorage::AnalyzeJob (Job ID: 5aebdead-e346-49e6-9f32-3fa002aa4315) from Inline(default) with arguments: #<GlobalID:0x0000555d995bd870 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/42>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5aebdead-e346-49e6-9f32-3fa002aa4315] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: cuMDKuNr55bc54seb9iPZzbU[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5aebdead-e346-49e6-9f32-3fa002aa4315] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5aebdead-e346-49e6-9f32-3fa002aa4315]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5aebdead-e346-49e6-9f32-3fa002aa4315]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5aebdead-e346-49e6-9f32-3fa002aa4315]   [1m[36mActiveStorage::Blob Update (0.8ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 42]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5aebdead-e346-49e6-9f32-3fa002aa4315]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5aebdead-e346-49e6-9f32-3fa002aa4315]   [1m[35m (24.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5aebdead-e346-49e6-9f32-3fa002aa4315]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [5aebdead-e346-49e6-9f32-3fa002aa4315] Performed ActiveStorage::AnalyzeJob (Job ID: 5aebdead-e346-49e6-9f32-3fa002aa4315) from Inline(default) in 33.43ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5aebdead-e346-49e6-9f32-3fa002aa4315) to Inline(default) with arguments: #<GlobalID:0x0000555d99566ca0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/42>>
+[36m  Disk Storage (1.4ms) [0m[32mUploaded file to key: GHyYfgHy45RUJpTD6HFT1fjU (checksum: ZkvGI3TEhCaZ2YT/f/44bA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "GHyYfgHy45RUJpTD6HFT1fjU"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 234113], ["checksum", "ZkvGI3TEhCaZ2YT/f/44bA=="], ["created_at", "2022-03-16 18:28:55.145566"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (34.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:28:55.183401"], ["updated_at", "2022-03-16 18:28:55.183401"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 43], ["blob_id", 43], ["created_at", "2022-03-16 18:28:55.184757"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.2ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:28:55.185796"], ["id", 43]]
+  ↳ db/seeds.rb:14
+  [1m[35m (30.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fe6596c8-61a6-44ed-9b75-0422a47b5966] Performing ActiveStorage::AnalyzeJob (Job ID: fe6596c8-61a6-44ed-9b75-0422a47b5966) from Inline(default) with arguments: #<GlobalID:0x0000555d994e7f68 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/43>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fe6596c8-61a6-44ed-9b75-0422a47b5966] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: GHyYfgHy45RUJpTD6HFT1fjU[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fe6596c8-61a6-44ed-9b75-0422a47b5966] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fe6596c8-61a6-44ed-9b75-0422a47b5966]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fe6596c8-61a6-44ed-9b75-0422a47b5966]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fe6596c8-61a6-44ed-9b75-0422a47b5966]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 43]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fe6596c8-61a6-44ed-9b75-0422a47b5966]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fe6596c8-61a6-44ed-9b75-0422a47b5966]   [1m[35m (29.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fe6596c8-61a6-44ed-9b75-0422a47b5966]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [fe6596c8-61a6-44ed-9b75-0422a47b5966] Performed ActiveStorage::AnalyzeJob (Job ID: fe6596c8-61a6-44ed-9b75-0422a47b5966) from Inline(default) in 33.97ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: fe6596c8-61a6-44ed-9b75-0422a47b5966) to Inline(default) with arguments: #<GlobalID:0x0000555d994ad390 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/43>>
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+[36m  Disk Storage (33.7ms) [0m[32mUploaded file to key: biNmbyXccawMP2DSUjhNZBBQ (checksum: f11aSlaPpjPW2ijC+yjKSQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "biNmbyXccawMP2DSUjhNZBBQ"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 38250], ["checksum", "f11aSlaPpjPW2ijC+yjKSQ=="], ["created_at", "2022-03-16 18:29:26.055254"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (27.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:26.096628"], ["updated_at", "2022-03-16 18:29:26.096628"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 44], ["blob_id", 44], ["created_at", "2022-03-16 18:29:26.099732"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.3ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:26.101506"], ["id", 44]]
+  ↳ db/seeds.rb:14
+  [1m[35m (28.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9314111e-2484-4278-bc4e-4f45724686b6] Performing ActiveStorage::AnalyzeJob (Job ID: 9314111e-2484-4278-bc4e-4f45724686b6) from Inline(default) with arguments: #<GlobalID:0x0000559a655c4d10 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/44>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9314111e-2484-4278-bc4e-4f45724686b6] [36m  Disk Storage (0.1ms) [0m[34mDownloaded file from key: biNmbyXccawMP2DSUjhNZBBQ[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9314111e-2484-4278-bc4e-4f45724686b6] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9314111e-2484-4278-bc4e-4f45724686b6]   [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9314111e-2484-4278-bc4e-4f45724686b6]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9314111e-2484-4278-bc4e-4f45724686b6]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 44]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9314111e-2484-4278-bc4e-4f45724686b6]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9314111e-2484-4278-bc4e-4f45724686b6]   [1m[35m (26.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9314111e-2484-4278-bc4e-4f45724686b6]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9314111e-2484-4278-bc4e-4f45724686b6] Performed ActiveStorage::AnalyzeJob (Job ID: 9314111e-2484-4278-bc4e-4f45724686b6) from Inline(default) in 1349.95ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9314111e-2484-4278-bc4e-4f45724686b6) to Inline(default) with arguments: #<GlobalID:0x0000559a67ce2d48 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/44>>
+[36m  Disk Storage (0.8ms) [0m[32mUploaded file to key: ERA8M4gyZf1aZLnTWm2mmZDg (checksum: ZOZLsYodIDC+6V5qLL8KLA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "ERA8M4gyZf1aZLnTWm2mmZDg"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 39378], ["checksum", "ZOZLsYodIDC+6V5qLL8KLA=="], ["created_at", "2022-03-16 18:29:27.506162"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (31.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:27.540184"], ["updated_at", "2022-03-16 18:29:27.540184"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 45], ["blob_id", 45], ["created_at", "2022-03-16 18:29:27.542368"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:27.544433"], ["id", 45]]
+  ↳ db/seeds.rb:14
+  [1m[35m (28.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 45], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a4f4fb1d-99e4-4159-a15e-3422fbe66891] Performing ActiveStorage::AnalyzeJob (Job ID: a4f4fb1d-99e4-4159-a15e-3422fbe66891) from Inline(default) with arguments: #<GlobalID:0x0000559a67d500f0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/45>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a4f4fb1d-99e4-4159-a15e-3422fbe66891] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: ERA8M4gyZf1aZLnTWm2mmZDg[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a4f4fb1d-99e4-4159-a15e-3422fbe66891] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a4f4fb1d-99e4-4159-a15e-3422fbe66891]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a4f4fb1d-99e4-4159-a15e-3422fbe66891]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a4f4fb1d-99e4-4159-a15e-3422fbe66891]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 45]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a4f4fb1d-99e4-4159-a15e-3422fbe66891]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a4f4fb1d-99e4-4159-a15e-3422fbe66891]   [1m[35m (24.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a4f4fb1d-99e4-4159-a15e-3422fbe66891]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [a4f4fb1d-99e4-4159-a15e-3422fbe66891] Performed ActiveStorage::AnalyzeJob (Job ID: a4f4fb1d-99e4-4159-a15e-3422fbe66891) from Inline(default) in 32.64ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: a4f4fb1d-99e4-4159-a15e-3422fbe66891) to Inline(default) with arguments: #<GlobalID:0x0000559a67d71548 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/45>>
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: yPYAgTSfHm6KWRtmxWRi55aN (checksum: erR0GVANxFhsRwBckVR/PQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "yPYAgTSfHm6KWRtmxWRi55aN"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 62683], ["checksum", "erR0GVANxFhsRwBckVR/PQ=="], ["created_at", "2022-03-16 18:29:27.615669"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:27.648406"], ["updated_at", "2022-03-16 18:29:27.648406"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 46], ["blob_id", 46], ["created_at", "2022-03-16 18:29:27.650577"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:27.652606"], ["id", 46]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f26dd28b-90e2-464e-bf94-2e32297f2704] Performing ActiveStorage::AnalyzeJob (Job ID: f26dd28b-90e2-464e-bf94-2e32297f2704) from Inline(default) with arguments: #<GlobalID:0x0000559a67dba8d8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/46>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f26dd28b-90e2-464e-bf94-2e32297f2704] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: yPYAgTSfHm6KWRtmxWRi55aN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f26dd28b-90e2-464e-bf94-2e32297f2704] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f26dd28b-90e2-464e-bf94-2e32297f2704]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f26dd28b-90e2-464e-bf94-2e32297f2704]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f26dd28b-90e2-464e-bf94-2e32297f2704]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 46]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f26dd28b-90e2-464e-bf94-2e32297f2704]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f26dd28b-90e2-464e-bf94-2e32297f2704]   [1m[35m (24.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f26dd28b-90e2-464e-bf94-2e32297f2704]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f26dd28b-90e2-464e-bf94-2e32297f2704] Performed ActiveStorage::AnalyzeJob (Job ID: f26dd28b-90e2-464e-bf94-2e32297f2704) from Inline(default) in 32.68ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: f26dd28b-90e2-464e-bf94-2e32297f2704) to Inline(default) with arguments: #<GlobalID:0x0000559a67debd70 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/46>>
+[36m  Disk Storage (1.6ms) [0m[32mUploaded file to key: KXiffzuVK2CwvAajtWWLLndd (checksum: bJu3GvHHq2nGm5anM6MHtA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "KXiffzuVK2CwvAajtWWLLndd"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 56743], ["checksum", "bJu3GvHHq2nGm5anM6MHtA=="], ["created_at", "2022-03-16 18:29:27.722793"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:27.755664"], ["updated_at", "2022-03-16 18:29:27.755664"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 47], ["blob_id", 47], ["created_at", "2022-03-16 18:29:27.757872"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:27.759772"], ["id", 47]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b447c70-9522-4966-8aa5-06f2f1b02003] Performing ActiveStorage::AnalyzeJob (Job ID: 4b447c70-9522-4966-8aa5-06f2f1b02003) from Inline(default) with arguments: #<GlobalID:0x0000559a67e611b0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/47>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b447c70-9522-4966-8aa5-06f2f1b02003] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: KXiffzuVK2CwvAajtWWLLndd[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b447c70-9522-4966-8aa5-06f2f1b02003] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b447c70-9522-4966-8aa5-06f2f1b02003]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b447c70-9522-4966-8aa5-06f2f1b02003]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b447c70-9522-4966-8aa5-06f2f1b02003]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 47]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b447c70-9522-4966-8aa5-06f2f1b02003]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b447c70-9522-4966-8aa5-06f2f1b02003]   [1m[35m (25.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b447c70-9522-4966-8aa5-06f2f1b02003]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b447c70-9522-4966-8aa5-06f2f1b02003] Performed ActiveStorage::AnalyzeJob (Job ID: 4b447c70-9522-4966-8aa5-06f2f1b02003) from Inline(default) in 32.59ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 4b447c70-9522-4966-8aa5-06f2f1b02003) to Inline(default) with arguments: #<GlobalID:0x0000559a67ea25e8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/47>>
+[36m  Disk Storage (1.7ms) [0m[32mUploaded file to key: QTfeopjkiV5GjZ2DgWwHN9p4 (checksum: gPz9BqYsux6CmiythByzCg==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "QTfeopjkiV5GjZ2DgWwHN9p4"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 50077], ["checksum", "gPz9BqYsux6CmiythByzCg=="], ["created_at", "2022-03-16 18:29:27.830031"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:27.863266"], ["updated_at", "2022-03-16 18:29:27.863266"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 48], ["blob_id", 48], ["created_at", "2022-03-16 18:29:27.865579"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.3ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:27.867558"], ["id", 48]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 48], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [134d3441-a8d5-49ed-b72e-2f4320593c56] Performing ActiveStorage::AnalyzeJob (Job ID: 134d3441-a8d5-49ed-b72e-2f4320593c56) from Inline(default) with arguments: #<GlobalID:0x0000559a67f239e0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/48>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [134d3441-a8d5-49ed-b72e-2f4320593c56] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: QTfeopjkiV5GjZ2DgWwHN9p4[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [134d3441-a8d5-49ed-b72e-2f4320593c56] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [134d3441-a8d5-49ed-b72e-2f4320593c56]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [134d3441-a8d5-49ed-b72e-2f4320593c56]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [134d3441-a8d5-49ed-b72e-2f4320593c56]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 48]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [134d3441-a8d5-49ed-b72e-2f4320593c56]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [134d3441-a8d5-49ed-b72e-2f4320593c56]   [1m[35m (24.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [134d3441-a8d5-49ed-b72e-2f4320593c56]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [134d3441-a8d5-49ed-b72e-2f4320593c56] Performed ActiveStorage::AnalyzeJob (Job ID: 134d3441-a8d5-49ed-b72e-2f4320593c56) from Inline(default) in 32.44ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 134d3441-a8d5-49ed-b72e-2f4320593c56) to Inline(default) with arguments: #<GlobalID:0x0000559a67f54e78 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/48>>
+[36m  Disk Storage (12.9ms) [0m[32mUploaded file to key: QRUExneVNtoLAc982pdpBYL9 (checksum: tAeJYi7TRrRDRtqxU08qPA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "QRUExneVNtoLAc982pdpBYL9"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 100689], ["checksum", "tAeJYi7TRrRDRtqxU08qPA=="], ["created_at", "2022-03-16 18:29:27.948656"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (39.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:27.992492"], ["updated_at", "2022-03-16 18:29:27.992492"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 49], ["blob_id", 49], ["created_at", "2022-03-16 18:29:27.994665"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:27.996602"], ["id", 49]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afa5d03e-49ef-4e01-b3ce-d192f54e7873] Performing ActiveStorage::AnalyzeJob (Job ID: afa5d03e-49ef-4e01-b3ce-d192f54e7873) from Inline(default) with arguments: #<GlobalID:0x0000559a67fe6198 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/49>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afa5d03e-49ef-4e01-b3ce-d192f54e7873] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: QRUExneVNtoLAc982pdpBYL9[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afa5d03e-49ef-4e01-b3ce-d192f54e7873] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afa5d03e-49ef-4e01-b3ce-d192f54e7873]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afa5d03e-49ef-4e01-b3ce-d192f54e7873]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afa5d03e-49ef-4e01-b3ce-d192f54e7873]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 49]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afa5d03e-49ef-4e01-b3ce-d192f54e7873]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afa5d03e-49ef-4e01-b3ce-d192f54e7873]   [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afa5d03e-49ef-4e01-b3ce-d192f54e7873]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afa5d03e-49ef-4e01-b3ce-d192f54e7873] Performed ActiveStorage::AnalyzeJob (Job ID: afa5d03e-49ef-4e01-b3ce-d192f54e7873) from Inline(default) in 32.72ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: afa5d03e-49ef-4e01-b3ce-d192f54e7873) to Inline(default) with arguments: #<GlobalID:0x0000559a6802f640 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/49>>
+[36m  Disk Storage (1.6ms) [0m[32mUploaded file to key: UcN1LEdWFzVB8jKoagSSB1Bw (checksum: mSx9jUehdVX4klrduAjMzQ==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "UcN1LEdWFzVB8jKoagSSB1Bw"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 67543], ["checksum", "mSx9jUehdVX4klrduAjMzQ=="], ["created_at", "2022-03-16 18:29:28.066799"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:28.099829"], ["updated_at", "2022-03-16 18:29:28.099829"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 50], ["blob_id", 50], ["created_at", "2022-03-16 18:29:28.102152"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:28.104070"], ["id", 50]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9c508c47-8809-40fc-aa3e-6eaba9cbc800] Performing ActiveStorage::AnalyzeJob (Job ID: 9c508c47-8809-40fc-aa3e-6eaba9cbc800) from Inline(default) with arguments: #<GlobalID:0x0000559a680a8a68 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/50>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9c508c47-8809-40fc-aa3e-6eaba9cbc800] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: UcN1LEdWFzVB8jKoagSSB1Bw[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9c508c47-8809-40fc-aa3e-6eaba9cbc800] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9c508c47-8809-40fc-aa3e-6eaba9cbc800]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9c508c47-8809-40fc-aa3e-6eaba9cbc800]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9c508c47-8809-40fc-aa3e-6eaba9cbc800]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 50]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9c508c47-8809-40fc-aa3e-6eaba9cbc800]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9c508c47-8809-40fc-aa3e-6eaba9cbc800]   [1m[35m (24.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9c508c47-8809-40fc-aa3e-6eaba9cbc800]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9c508c47-8809-40fc-aa3e-6eaba9cbc800] Performed ActiveStorage::AnalyzeJob (Job ID: 9c508c47-8809-40fc-aa3e-6eaba9cbc800) from Inline(default) in 32.75ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9c508c47-8809-40fc-aa3e-6eaba9cbc800) to Inline(default) with arguments: #<GlobalID:0x0000559a680edf28 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/50>>
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: D3ioRZom6fiqDG6VKPZCM42b (checksum: n3uGAr2Rp2GJBigDWENvmw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "D3ioRZom6fiqDG6VKPZCM42b"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 44502], ["checksum", "n3uGAr2Rp2GJBigDWENvmw=="], ["created_at", "2022-03-16 18:29:28.173841"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:28.207094"], ["updated_at", "2022-03-16 18:29:28.207094"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 51], ["blob_id", 51], ["created_at", "2022-03-16 18:29:28.209277"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.4ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:28.211057"], ["id", 51]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9e2fcd2-a4a5-47d2-8ea7-088545e36c60] Performing ActiveStorage::AnalyzeJob (Job ID: f9e2fcd2-a4a5-47d2-8ea7-088545e36c60) from Inline(default) with arguments: #<GlobalID:0x0000559a6816b2e8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/51>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9e2fcd2-a4a5-47d2-8ea7-088545e36c60] [36m  Disk Storage (19.9ms) [0m[34mDownloaded file from key: D3ioRZom6fiqDG6VKPZCM42b[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9e2fcd2-a4a5-47d2-8ea7-088545e36c60] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9e2fcd2-a4a5-47d2-8ea7-088545e36c60]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9e2fcd2-a4a5-47d2-8ea7-088545e36c60]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9e2fcd2-a4a5-47d2-8ea7-088545e36c60]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 51]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9e2fcd2-a4a5-47d2-8ea7-088545e36c60]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9e2fcd2-a4a5-47d2-8ea7-088545e36c60]   [1m[35m (27.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9e2fcd2-a4a5-47d2-8ea7-088545e36c60]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [f9e2fcd2-a4a5-47d2-8ea7-088545e36c60] Performed ActiveStorage::AnalyzeJob (Job ID: f9e2fcd2-a4a5-47d2-8ea7-088545e36c60) from Inline(default) in 54.82ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: f9e2fcd2-a4a5-47d2-8ea7-088545e36c60) to Inline(default) with arguments: #<GlobalID:0x0000559a68191100 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/51>>
+[36m  Disk Storage (1.4ms) [0m[32mUploaded file to key: T4HkGTrGdANsNQjcZ9aij1g6 (checksum: /i+mziSuOGczbsXsRabrGw==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "T4HkGTrGdANsNQjcZ9aij1g6"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 24729], ["checksum", "/i+mziSuOGczbsXsRabrGw=="], ["created_at", "2022-03-16 18:29:28.303324"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:28.336513"], ["updated_at", "2022-03-16 18:29:28.336513"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 52], ["blob_id", 52], ["created_at", "2022-03-16 18:29:28.338844"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:28.340803"], ["id", 52]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 52], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc358b5e-2ed3-4e50-ba13-97e0943bcc7f] Performing ActiveStorage::AnalyzeJob (Job ID: dc358b5e-2ed3-4e50-ba13-97e0943bcc7f) from Inline(default) with arguments: #<GlobalID:0x0000559a68101028 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/52>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc358b5e-2ed3-4e50-ba13-97e0943bcc7f] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: T4HkGTrGdANsNQjcZ9aij1g6[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc358b5e-2ed3-4e50-ba13-97e0943bcc7f] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc358b5e-2ed3-4e50-ba13-97e0943bcc7f]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc358b5e-2ed3-4e50-ba13-97e0943bcc7f]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc358b5e-2ed3-4e50-ba13-97e0943bcc7f]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 52]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc358b5e-2ed3-4e50-ba13-97e0943bcc7f]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc358b5e-2ed3-4e50-ba13-97e0943bcc7f]   [1m[35m (25.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc358b5e-2ed3-4e50-ba13-97e0943bcc7f]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [dc358b5e-2ed3-4e50-ba13-97e0943bcc7f] Performed ActiveStorage::AnalyzeJob (Job ID: dc358b5e-2ed3-4e50-ba13-97e0943bcc7f) from Inline(default) in 32.77ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: dc358b5e-2ed3-4e50-ba13-97e0943bcc7f) to Inline(default) with arguments: #<GlobalID:0x0000559a680b1cd0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/52>>
+[36m  Disk Storage (18.8ms) [0m[32mUploaded file to key: j1Pwca9CZgas6jFcmNjRZNSN (checksum: cTlfAhK+ZdNqpDs56RkpOA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "j1Pwca9CZgas6jFcmNjRZNSN"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 1628407], ["checksum", "cTlfAhK+ZdNqpDs56RkpOA=="], ["created_at", "2022-03-16 18:29:28.434957"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (37.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:28.477084"], ["updated_at", "2022-03-16 18:29:28.477084"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 53], ["blob_id", 53], ["created_at", "2022-03-16 18:29:28.479449"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:28.481489"], ["id", 53]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2a2b878-f003-43ca-ae80-4a295257c6b2] Performing ActiveStorage::AnalyzeJob (Job ID: e2a2b878-f003-43ca-ae80-4a295257c6b2) from Inline(default) with arguments: #<GlobalID:0x0000559a6802efb0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/53>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2a2b878-f003-43ca-ae80-4a295257c6b2] [36m  Disk Storage (3.6ms) [0m[34mDownloaded file from key: j1Pwca9CZgas6jFcmNjRZNSN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2a2b878-f003-43ca-ae80-4a295257c6b2] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2a2b878-f003-43ca-ae80-4a295257c6b2]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2a2b878-f003-43ca-ae80-4a295257c6b2]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2a2b878-f003-43ca-ae80-4a295257c6b2]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 53]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2a2b878-f003-43ca-ae80-4a295257c6b2]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2a2b878-f003-43ca-ae80-4a295257c6b2]   [1m[35m (32.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2a2b878-f003-43ca-ae80-4a295257c6b2]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e2a2b878-f003-43ca-ae80-4a295257c6b2] Performed ActiveStorage::AnalyzeJob (Job ID: e2a2b878-f003-43ca-ae80-4a295257c6b2) from Inline(default) in 43.45ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e2a2b878-f003-43ca-ae80-4a295257c6b2) to Inline(default) with arguments: #<GlobalID:0x0000559a680044b8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/53>>
+[36m  Disk Storage (1.5ms) [0m[32mUploaded file to key: Tp6XSS5UnxEdoqeTidg2nXf1 (checksum: +k7z3pVlXesD7aJPrJtuow==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "Tp6XSS5UnxEdoqeTidg2nXf1"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 55283], ["checksum", "+k7z3pVlXesD7aJPrJtuow=="], ["created_at", "2022-03-16 18:29:28.562351"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (28.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:28.595331"], ["updated_at", "2022-03-16 18:29:28.595331"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 54], ["blob_id", 54], ["created_at", "2022-03-16 18:29:28.597582"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:28.599510"], ["id", 54]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [018272e7-dcef-432c-87ca-51c4aada5b08] Performing ActiveStorage::AnalyzeJob (Job ID: 018272e7-dcef-432c-87ca-51c4aada5b08) from Inline(default) with arguments: #<GlobalID:0x0000559a67f797a0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/54>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [018272e7-dcef-432c-87ca-51c4aada5b08] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: Tp6XSS5UnxEdoqeTidg2nXf1[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [018272e7-dcef-432c-87ca-51c4aada5b08] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [018272e7-dcef-432c-87ca-51c4aada5b08]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [018272e7-dcef-432c-87ca-51c4aada5b08]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [018272e7-dcef-432c-87ca-51c4aada5b08]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 54]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [018272e7-dcef-432c-87ca-51c4aada5b08]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [018272e7-dcef-432c-87ca-51c4aada5b08]   [1m[35m (25.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [018272e7-dcef-432c-87ca-51c4aada5b08]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [018272e7-dcef-432c-87ca-51c4aada5b08] Performed ActiveStorage::AnalyzeJob (Job ID: 018272e7-dcef-432c-87ca-51c4aada5b08) from Inline(default) in 32.85ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 018272e7-dcef-432c-87ca-51c4aada5b08) to Inline(default) with arguments: #<GlobalID:0x0000559a67f22ba8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/54>>
+[36m  Disk Storage (2.4ms) [0m[32mUploaded file to key: Wh338wjJXvmoKr42xkyuZP9y (checksum: ZkvGI3TEhCaZ2YT/f/44bA==)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "Wh338wjJXvmoKr42xkyuZP9y"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 234113], ["checksum", "ZkvGI3TEhCaZ2YT/f/44bA=="], ["created_at", "2022-03-16 18:29:28.671145"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (27.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:28.702425"], ["updated_at", "2022-03-16 18:29:28.702425"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 55], ["blob_id", 55], ["created_at", "2022-03-16 18:29:28.704595"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:28.706353"], ["id", 55]]
+  ↳ db/seeds.rb:14
+  [1m[35m (39.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 55], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0bb833ec-02b0-4e40-aac4-f42699c23e6e] Performing ActiveStorage::AnalyzeJob (Job ID: 0bb833ec-02b0-4e40-aac4-f42699c23e6e) from Inline(default) with arguments: #<GlobalID:0x0000559a67ea3ec0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/55>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0bb833ec-02b0-4e40-aac4-f42699c23e6e] [36m  Disk Storage (0.6ms) [0m[34mDownloaded file from key: Wh338wjJXvmoKr42xkyuZP9y[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0bb833ec-02b0-4e40-aac4-f42699c23e6e] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0bb833ec-02b0-4e40-aac4-f42699c23e6e]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0bb833ec-02b0-4e40-aac4-f42699c23e6e]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0bb833ec-02b0-4e40-aac4-f42699c23e6e]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 55]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0bb833ec-02b0-4e40-aac4-f42699c23e6e]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0bb833ec-02b0-4e40-aac4-f42699c23e6e]   [1m[35m (25.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0bb833ec-02b0-4e40-aac4-f42699c23e6e]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [0bb833ec-02b0-4e40-aac4-f42699c23e6e] Performed ActiveStorage::AnalyzeJob (Job ID: 0bb833ec-02b0-4e40-aac4-f42699c23e6e) from Inline(default) in 33.06ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 0bb833ec-02b0-4e40-aac4-f42699c23e6e) to Inline(default) with arguments: #<GlobalID:0x0000559a67e692c0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/55>>
+[36m  Disk Storage (2.9ms) [0m[32mUploaded file to key: GQ513EeWxuM8qftmCp4TMePL (checksum: Ur1Hamocjug4dsbsNTcwzQ==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "GQ513EeWxuM8qftmCp4TMePL"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 325129], ["checksum", "Ur1Hamocjug4dsbsNTcwzQ=="], ["created_at", "2022-03-16 18:29:28.791003"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (25.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.4ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 18:29:28.820935"], ["updated_at", "2022-03-16 18:29:28.820935"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 56], ["blob_id", 56], ["created_at", "2022-03-16 18:29:28.823116"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 18:29:28.825027"], ["id", 56]]
+  ↳ db/seeds.rb:14
+  [1m[35m (27.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8c29286c-3dae-4c93-9eb1-26baed57eee6] Performing ActiveStorage::AnalyzeJob (Job ID: 8c29286c-3dae-4c93-9eb1-26baed57eee6) from Inline(default) with arguments: #<GlobalID:0x0000559a67dea5d8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/56>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8c29286c-3dae-4c93-9eb1-26baed57eee6] [36m  Disk Storage (0.8ms) [0m[34mDownloaded file from key: GQ513EeWxuM8qftmCp4TMePL[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8c29286c-3dae-4c93-9eb1-26baed57eee6] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8c29286c-3dae-4c93-9eb1-26baed57eee6]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8c29286c-3dae-4c93-9eb1-26baed57eee6]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8c29286c-3dae-4c93-9eb1-26baed57eee6]   [1m[36mActiveStorage::Blob Update (0.5ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 56]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8c29286c-3dae-4c93-9eb1-26baed57eee6]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8c29286c-3dae-4c93-9eb1-26baed57eee6]   [1m[35m (25.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8c29286c-3dae-4c93-9eb1-26baed57eee6]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [8c29286c-3dae-4c93-9eb1-26baed57eee6] Performed ActiveStorage::AnalyzeJob (Job ID: 8c29286c-3dae-4c93-9eb1-26baed57eee6) from Inline(default) in 32.83ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 8c29286c-3dae-4c93-9eb1-26baed57eee6) to Inline(default) with arguments: #<GlobalID:0x0000559a67dbba80 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/56>>

@@ -19,7 +19,7 @@ body {
   color: rgba(0, 0, 0,);
   text-align: center;
   font-family: 'Poppins', sans-serif;
-  background-image: url("cat16.jpg");
+  background-image: url("cat13.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -61,4 +61,8 @@ margin: 0 20px
   text-decoration: none;
   color: #fff;
   text-decoration: uppercase;
+}
+
+input[type="checkbox"]:checked {
+  filter: invert(100%) hue-rotate(4deg) brightness(1.7);
 }
