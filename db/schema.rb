@@ -47,6 +47,17 @@ ActiveRecord::Schema.define(version: 2022_03_15_193044) do
     t.index ["user_id"], name: "index_cart_items_on_user_id"
   end
 
+  create_table "carts", force: :cascade do |t|
+    t.integer "quantity"
+    t.boolean "in_cart"
+    t.bigint "item_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_carts_on_item_id"
+    t.index ["user_id"], name: "index_carts_on_user_id"
+  end
+
   create_table "comments", force: :cascade do |t|
     t.string "content"
     t.bigint "user_id"
@@ -68,11 +79,11 @@ ActiveRecord::Schema.define(version: 2022_03_15_193044) do
   create_table "orders", force: :cascade do |t|
     t.boolean "achieved"
     t.bigint "item_id"
-    t.bigint "customer_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["customer_id"], name: "index_orders_on_customer_id"
     t.index ["item_id"], name: "index_orders_on_item_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
