@@ -8484,3 +8484,163 @@ Processing by ItemsController#index as HTML
 Completed 200 OK in 126ms (Views: 101.9ms | ActiveRecord: 19.3ms)
 
 
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+[36m  Disk Storage (1.7ms) [0m[32mUploaded file to key: v1MFK7BZHrmd4tHJQPw2rPFg (checksum: PBjaiISa9if1wcxA0+DPyQ==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (60.9ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "v1MFK7BZHrmd4tHJQPw2rPFg"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 50552], ["checksum", "PBjaiISa9if1wcxA0+DPyQ=="], ["created_at", "2022-03-16 09:42:38.233312"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (26.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (12.2ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 09:42:38.355057"], ["updated_at", "2022-03-16 09:42:38.355057"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (43.6ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 2], ["blob_id", 2], ["created_at", "2022-03-16 09:42:38.369749"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.7ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 09:42:38.415197"], ["id", 2]]
+  ↳ db/seeds.rb:14
+  [1m[35m (34.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7bb48a87-a733-48e8-bf29-a8e4cd21ccfc] Performing ActiveStorage::AnalyzeJob (Job ID: 7bb48a87-a733-48e8-bf29-a8e4cd21ccfc) from Inline(default) with arguments: #<GlobalID:0x000055a9acfcec88 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7bb48a87-a733-48e8-bf29-a8e4cd21ccfc] [36m  Disk Storage (0.3ms) [0m[34mDownloaded file from key: v1MFK7BZHrmd4tHJQPw2rPFg[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7bb48a87-a733-48e8-bf29-a8e4cd21ccfc] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7bb48a87-a733-48e8-bf29-a8e4cd21ccfc]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7bb48a87-a733-48e8-bf29-a8e4cd21ccfc]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7bb48a87-a733-48e8-bf29-a8e4cd21ccfc]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7bb48a87-a733-48e8-bf29-a8e4cd21ccfc]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7bb48a87-a733-48e8-bf29-a8e4cd21ccfc]   [1m[35m (56.0ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7bb48a87-a733-48e8-bf29-a8e4cd21ccfc]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [7bb48a87-a733-48e8-bf29-a8e4cd21ccfc] Performed ActiveStorage::AnalyzeJob (Job ID: 7bb48a87-a733-48e8-bf29-a8e4cd21ccfc) from Inline(default) in 2361.97ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 7bb48a87-a733-48e8-bf29-a8e4cd21ccfc) to Inline(default) with arguments: #<GlobalID:0x000055a9af69bdc0 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/2>>
+[36m  Disk Storage (2.8ms) [0m[32mUploaded file to key: 9JETGGbeVZQGc3UTAcaY4eQR (checksum: K6iWt5igLcNYg0KQIlRy5A==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActiveStorage::Blob Create (0.5ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "9JETGGbeVZQGc3UTAcaY4eQR"], ["filename", "chat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 230215], ["checksum", "K6iWt5igLcNYg0KQIlRy5A=="], ["created_at", "2022-03-16 09:42:41.215989"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (26.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mItem Create (0.5ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Photo de chat"], ["price", 100], ["created_at", "2022-03-16 09:42:41.247239"], ["updated_at", "2022-03-16 09:42:41.247239"]]
+  ↳ db/seeds.rb:14
+  [1m[36mActiveStorage::Attachment Create (0.7ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "picture"], ["record_type", "Item"], ["record_id", 3], ["blob_id", 3], ["created_at", "2022-03-16 09:42:41.249793"]]
+  ↳ db/seeds.rb:14
+  [1m[36mItem Update (0.5ms)[0m  [1m[33mUPDATE "items" SET "updated_at" = $1 WHERE "items"."id" = $2[0m  [["updated_at", "2022-03-16 09:42:41.252215"], ["id", 3]]
+  ↳ db/seeds.rb:14
+  [1m[35m (25.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+[ActiveJob]   [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b524e54-6982-43cc-b330-06908d2d7796] Performing ActiveStorage::AnalyzeJob (Job ID: 4b524e54-6982-43cc-b330-06908d2d7796) from Inline(default) with arguments: #<GlobalID:0x000055a9af71d1b8 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b524e54-6982-43cc-b330-06908d2d7796] [36m  Disk Storage (0.7ms) [0m[34mDownloaded file from key: 9JETGGbeVZQGc3UTAcaY4eQR[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b524e54-6982-43cc-b330-06908d2d7796] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b524e54-6982-43cc-b330-06908d2d7796]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b524e54-6982-43cc-b330-06908d2d7796]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b524e54-6982-43cc-b330-06908d2d7796]   [1m[36mActiveStorage::Blob Update (0.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b524e54-6982-43cc-b330-06908d2d7796]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b524e54-6982-43cc-b330-06908d2d7796]   [1m[35m (30.7ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b524e54-6982-43cc-b330-06908d2d7796]   ↳ db/seeds.rb:14
+[ActiveJob] [ActiveStorage::AnalyzeJob] [4b524e54-6982-43cc-b330-06908d2d7796] Performed ActiveStorage::AnalyzeJob (Job ID: 4b524e54-6982-43cc-b330-06908d2d7796) from Inline(default) in 54.25ms
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 4b524e54-6982-43cc-b330-06908d2d7796) to Inline(default) with arguments: #<GlobalID:0x000055a9af77a638 @uri=#<URI::GID gid://chatons-project/ActiveStorage::Blob/3>>
+Started GET "/chat" for 127.0.0.1 at 2022-03-16 10:43:05 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+Processing by ItemsController#index as HTML
+  Rendering items/index.html.erb within layouts/application
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/items/index.html.erb:1
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 3], ["record_type", "Item"], ["name", "picture"], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/items/index.html.erb:3
+  Rendered items/index.html.erb within layouts/application (1600.0ms)
+  Rendered application/_nav.html.erb (2.7ms)
+Completed 200 OK in 2276ms (Views: 2248.7ms | ActiveRecord: 18.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d5983c7aca242c11ff44842892d9035f286a981/chat.jpg" for 127.0.0.1 at 2022-03-16 10:43:07 +0100
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--beb23836c54ac2823c6d11709c0001c2cd00babe/chat.jpg" for 127.0.0.1 at 2022-03-16 10:43:07 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d5983c7aca242c11ff44842892d9035f286a981", "filename"=>"chat"}
+  [1m[36mActiveStorage::Blob Load (2.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.0ms) [0m[34mGenerated URL for file at key: v1MFK7BZHrmd4tHJQPw2rPFg (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDA5OjQ4OjA3LjY5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--369f8299f66257527d84cbcaee12971749db0f1b/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDA5OjQ4OjA3LjY5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--369f8299f66257527d84cbcaee12971749db0f1b/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg
+Completed 302 Found in 11ms (ActiveRecord: 2.4ms)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--beb23836c54ac2823c6d11709c0001c2cd00babe", "filename"=>"chat"}
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: 9JETGGbeVZQGc3UTAcaY4eQR (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDA5OjQ4OjA3LjcwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a98b708ca0adae98e0a41d0431e377813ea832bc/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDA5OjQ4OjA3LjcwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a98b708ca0adae98e0a41d0431e377813ea832bc/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDA5OjQ4OjA3LjY5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--369f8299f66257527d84cbcaee12971749db0f1b/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg" for 127.0.0.1 at 2022-03-16 10:43:07 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chat.jpg\"; filename*=UTF-8''chat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRkakZOUmtzM1FscEljbTFrTkhSSVNsRlFkekp5VUVabkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDA5OjQ4OjA3LjY5MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--369f8299f66257527d84cbcaee12971749db0f1b", "filename"=>"chat"}
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDA5OjQ4OjA3LjcwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a98b708ca0adae98e0a41d0431e377813ea832bc/chat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22chat.jpg%22%3B+filename%2A%3DUTF-8%27%27chat.jpg" for 127.0.0.1 at 2022-03-16 10:43:07 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"chat.jpg\"; filename*=UTF-8''chat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRPVXBGVkVkSFltVldXbEZIWXpOVlZFRmpZVmswWlZGU0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZMmhoZEM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMk5vWVhRdWFuQm5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lQYVcxaFoyVXZhbkJsWndZN0JsUT0iLCJleHAiOiIyMDIyLTAzLTE2VDA5OjQ4OjA3LjcwN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a98b708ca0adae98e0a41d0431e377813ea832bc", "filename"=>"chat"}
+Completed 200 OK in 41ms (ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 36ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98/cutecat.jpg" for 127.0.0.1 at 2022-03-16 10:43:08 +0100
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9f95b2e08ff12933def5c16eb3da70f1cbbadb98", "filename"=>"cutecat"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/odin/.rvm/gems/ruby-2.7.4/gems/activerecord-5.2.7/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: CvWgfaHcpyMsYZavDaMUAAmc (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMDk6NDg6MDguMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--8bc48d50059e12f42f22e7e92638c3a1257496e6/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMDk6NDg6MDguMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--8bc48d50059e12f42f22e7e92638c3a1257496e6/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg
+Completed 302 Found in 19ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMDk6NDg6MDguMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--8bc48d50059e12f42f22e7e92638c3a1257496e6/cutecat.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22cutecat.jpg%22%3B+filename%2A%3DUTF-8%27%27cutecat.jpg" for 127.0.0.1 at 2022-03-16 10:43:08 +0100
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"cutecat.jpg\"; filename*=UTF-8''cutecat.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRRM1pYWjJaaFNHTndlVTF6V1ZwaGRrUmhUVlZCUVcxakJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSkJhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlZM1YwWldOaGRDNXFjR2NpT3lCbWFXeGxibUZ0WlNvOVZWUkdMVGduSjJOMWRHVmpZWFF1YW5CbkJqc0dWRG9SWTI5dWRHVnVkRjkwZVhCbFNTSVBhVzFoWjJVdmFuQmxad1k3QmxRPSIsImV4cCI6IjIwMjItMDMtMTZUMDk6NDg6MDguMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--8bc48d50059e12f42f22e7e92638c3a1257496e6", "filename"=>"cutecat"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
