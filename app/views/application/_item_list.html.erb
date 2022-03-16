@@ -4,7 +4,6 @@
         <%= image_tag(item.picture) if item.picture.attached?  %>
         <div id="photo<%= item.id %>" class="collapse buying-div">
                 <%= form_with url: carts_path(item.id), method: :post do |form| %>
-                    <%= form.label "quantity" %>
                     <%= form.hidden_field :item_id, value: item.id %>
                     <%= form.hidden_field :quantity, value: 1 %><br>
                     <%= form.submit "Ajouter au Panier", class: "btn btn-sm btn-outline-warning" %>
