@@ -8,4 +8,4 @@ module CartsHelper
             end
         end
     end
-end© 
+end
