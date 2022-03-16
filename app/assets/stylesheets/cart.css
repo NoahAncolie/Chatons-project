@@ -1,10 +1,19 @@
 .cart-body {
+<<<<<<< HEAD
+=======
+    animation : openCart 1s ease-in-out;
+>>>>>>> cats-shop
     position : fixed;
     top : 70px;
     right : 30px;
     width : 200px;
     height : 400px;
+<<<<<<< HEAD
     background-color : red;
+=======
+    border-radius : 5px;
+    background-color : whitesmoke;
+>>>>>>> cats-shop
 }
 
 .cart-title {
@@ -12,6 +21,7 @@
 }
 
 .cart-elements {
+<<<<<<< HEAD
     overflow-y : auto;
     scrollbar-color:  red blue;
 }
@@ -45,4 +55,13 @@
 @keyframes unfade {
     0% { opacity: 0%; }
     100% { opacity: 100%; }
+=======
+    overflow-y : scroll;
+    scrollbar-color:  lightgray whitesmoke;
+}
+
+@keyframes openCart {
+    0% { right : 1020px; top : -170px; transform: scale(0.1); opacity : 10%; }
+    100% { right : 30px; top : 70px; transform: scale(1); opacity : 100%; }
+>>>>>>> cats-shop
 }

@@ -11,6 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
  *= require cart
+ *= require form-friendly
+ *= require items
  */
 
 body {
@@ -24,7 +26,6 @@ body {
   position: relative;
   height: 100vh;
 }
-
 
 .d-block{
 

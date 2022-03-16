@@ -77,8 +77,7 @@ ActiveRecord::Schema.define(version: 2022_03_15_193044) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer "quantity"
-    t.integer "total_price"
+    t.boolean "achieved"
     t.bigint "item_id"
     t.bigint "user_id"
     t.datetime "created_at", null: false
