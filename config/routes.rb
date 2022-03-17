@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
   get 'contact/index'
   devise_for :users
   resources :user_logins, only: [:new]
@@ -13,4 +14,9 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :update, :edit], path: 'profil'
   resources :charges, only: [:new, :create]
   resources :contact, only: [:index], path: 'contact'
+
+
+
+
+
 end
