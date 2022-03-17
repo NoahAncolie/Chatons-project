@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :orders
     resources :comments
   end
-  resources :carts, only: [:create, :show, :update, :destroy], path: 'panier'
+  resources :carts, only: [:index, :create, :show, :update, :destroy], path: 'panier'
   resources :users, only: [:show, :update, :edit], path: 'profil'
   resources :charges, only: [:new, :create]
   resources :contact, only: [:index], path: 'contact'

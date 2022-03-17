@@ -57,7 +57,7 @@ input[type="checkbox"]:checked {
 }
 
 .footer{
-    position:absolute;
+    position: absolute;
     width: 100%;
     bottom: 0;
     background: #ffd90100 url(img/footer.png) ;
