@@ -7,7 +7,7 @@
 
 .login-outer {
     text-align: center;
-    width : 350px;
+    width : 30vw;
     display : flex;
     justify-content : center;
     background-color : whitesmoke;
@@ -22,6 +22,13 @@
 }
 
 .sign-up {
+    align-content : center;
+    width : 200px;
+    height : 450px;
+    background-color : whitesmoke;
+}
+
+.form-group {
     align-content : center;
     width : 200px;
     height : 450px;
