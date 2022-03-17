@@ -14,4 +14,3 @@ Rails.application.routes.draw do
   resources :charges, only: [:new, :create], path: 'paiement'
   resources :contact, only: [:index], path: 'contact'
 end
- 
