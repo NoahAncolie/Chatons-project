@@ -3,13 +3,16 @@ class CartsController < ApplicationController
   before_action :authenticate_user
 
   def index
+    @cart = current_cart
   end
 
   def create
     :authenticate_user
     @cart_item = CartItem.new(permit_params)
     if @cart_item.save
-      redirect_to '/'
+      respond_to do |format|
+        format.js { }
+      end
     else 
       flash.now[:error] = puts @cart_item.errors.messages
       render 'chat'
@@ -31,8 +34,14 @@ class CartsController < ApplicationController
   end
 
   def destroy
-    
+    CartItem.find(params[:id].to_i).destroy
+    @cart = current_cart
+    respond_to do |format|
+      format.html { redirect_to carts_path }
+      format.js { }
+    end
   end
+
   private
 
   def find_price

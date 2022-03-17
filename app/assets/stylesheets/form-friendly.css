@@ -1,13 +1,14 @@
 .login {
     align-content : center;
     width : 250px;
-    height : 525px;
+    height : fit-content;
     background-color : whitesmoke;
 }
 
 .login-outer {
     text-align: center;
     width : 30vw;
+    padding-bottom : 20px;
     display : flex;
     justify-content : center;
     background-color : whitesmoke;
