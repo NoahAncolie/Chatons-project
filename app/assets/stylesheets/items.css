@@ -33,6 +33,7 @@
     margin-top : calc(15vh + 5px);
     display : flex;
     flex-wrap : wrap;
+    justify-content: space-between;
 }
 
 .item {
@@ -74,4 +75,10 @@
 .transparent {
     background-color : transparent;
     color : whitesmoke;
+}
+
+.price {
+    position : absolute;
+    bottom : -10px;
+    right : 10px;
 }

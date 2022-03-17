@@ -8,4 +8,12 @@ module CartsHelper
             end
         end
     end
+
+    def cart_total
+        @price = 0
+        current_cart.each do |cart_item|
+            @price += Item.find(cart_item.item_id).price
+        end
+        return @price
+    end
 end
