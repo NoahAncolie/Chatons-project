@@ -5,11 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
-13.times do |i|
-    item = Item.new
-    item.picture.attach(io: File.open(File.join(Rails.root,"app/assets/images/cat#{i+ 1}.jpg")), filename: 'chat.jpg')
-    item.name = "Photo de chat"
-    item.price = 100
-    item.save
+10.times do 
+    13.times do |i|
+        item = Item.new
+        item.picture.attach(io: File.open(File.join(Rails.root,"app/assets/images/cat#{i+ 1}.jpg")), filename: 'chat.jpg')
+        item.name = "Photo de chat"
+        item.price = 100
+        item.save
+    end
 end

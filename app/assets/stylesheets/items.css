@@ -30,15 +30,11 @@
 }
 
 .item-list {
+    padding : 0 5px;
     margin-top : calc(15vh + 5px);
     display : flex;
     flex-wrap : wrap;
     justify-content: space-between;
-}
-
-.item {
-    width : 50%;
-    margin : 60px 25%
 }
 
 .item-body {
@@ -78,7 +74,12 @@
 }
 
 .price {
+    color : lightgray;
     position : absolute;
     bottom : -10px;
     right : 10px;
+}
+
+.bb {
+    margin-left : 5px;
 }

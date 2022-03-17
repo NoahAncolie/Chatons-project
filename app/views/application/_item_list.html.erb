@@ -6,11 +6,11 @@
                 <%= form_with url: carts_path(item.id), method: :post, remote: true do |form| %>
                     <%= form.hidden_field :item_id, value: item.id %>
                     <%= form.hidden_field :quantity, value: 1 %><br>
-                    <%= form.submit "Panier", class: "btn btn-sm btn-outline-warning" %>
+                    <%= form.submit "Panier", class: "bb btn btn-sm btn-outline-warning" %>
                 <% end %>
                 <br>
-                <%= link_to "Acheter", item_path(item.id), method: :get, class: "btn btn-sm btn-outline-warning" %>
-                <p class="text-muted price">$<%= item.price %></p>
+                <%= link_to "Acheter", item_path(item.id), method: :get, class: "bb btn btn-sm btn-outline-warning" %>
+                <p class="price">$<%= item.price %></p>
         </div>
     </div>
     <% end %>
