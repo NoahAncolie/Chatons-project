@@ -8,11 +8,10 @@ gem 'stripe'
 gem 'devise'
 gem "dotenv-rails"
 gem 'execjs'
+gem 'therubyracer', :platforms => :ruby
 gem 'table_print'
-gem 'letter_opener'
 gem 'faker'
 gem 'simple_form'
-gem 'therubyracer', :platforms => :ruby
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.6', '>= 5.2.6.3'
 # Use postgresql as the database for Active Record
@@ -44,9 +43,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-
-
-#gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
