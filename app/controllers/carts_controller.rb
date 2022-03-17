@@ -3,6 +3,7 @@ class CartsController < ApplicationController
   before_action :authenticate_user
 
   def index
+    @cart = current_cart
   end
 
   def create
@@ -34,11 +35,13 @@ class CartsController < ApplicationController
 
   def destroy
     CartItem.find(params[:id].to_i).destroy
+    @cart = current_cart
     respond_to do |format|
-      format.html { redirect_to 'chat' }
+      format.html { redirect_to carts_path }
       format.js { }
     end
   end
+
   private
 
   def find_price

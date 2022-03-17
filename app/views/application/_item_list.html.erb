@@ -9,7 +9,7 @@
                     <%= form.submit "Panier", class: "btn btn-sm btn-outline-warning" %>
                 <% end %>
                 <br>
-                <%= link_to "Acheter", item_orders_path(item.id), method: :post, class: "btn btn-sm btn-outline-warning" %>
+                <%= link_to "Acheter", item_path(item.id), method: :get, class: "btn btn-sm btn-outline-warning" %>
                 <p class="text-muted price">$<%= item.price %></p>
         </div>
     </div>

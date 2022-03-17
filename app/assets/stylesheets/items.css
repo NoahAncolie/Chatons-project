@@ -33,6 +33,7 @@
     margin-top : calc(15vh + 5px);
     display : flex;
     flex-wrap : wrap;
+    justify-content: space-between;
 }
 
 .item {
