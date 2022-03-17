@@ -13,4 +13,19 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :update, :edit], path: 'profil'
   resources :charges, only: [:new, :create]
   resources :contact, only: [:index], path: 'contact'
+
+  namespace :admin do
+    root to: 'admin/items#index'
+    resources :dashboard, only: [:index]
+    resources :users, path: 'profil'
+    resources :orders, path: 'paiement'
+    resources :items, path: 'chat' do
+    resources :comments
+    end
+  end
+
+
+
+
+
 end
