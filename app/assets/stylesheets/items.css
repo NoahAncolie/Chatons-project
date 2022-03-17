@@ -30,6 +30,7 @@
 }
 
 .item-list {
+    margin-top : calc(15vh + 5px);
     display : flex;
     flex-wrap : wrap;
 }
@@ -73,8 +74,4 @@
 .transparent {
     background-color : transparent;
     color : whitesmoke;
-}
-
-svg {
-    width : 40px;
 }
