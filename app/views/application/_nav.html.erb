@@ -23,7 +23,7 @@
             <% end %>
             <div class="dropdown-menu">
               <% if user_signed_in? %>
-                <a class="dropdown-item text-black" href="#">My profile</a>
+                <a class="dropdown-item text-black" href="<%=user_path(current_user.id)%>">My profile</a>
               <% else %>
                 <%= link_to "Sign in", new_user_session_path, method: :get, class: "dropdown-item text-black" %>
               <% end %>

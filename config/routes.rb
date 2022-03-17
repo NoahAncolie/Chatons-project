@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
   get 'contact/index'
   devise_for :users
   resources :user_logins, only: [:new]
