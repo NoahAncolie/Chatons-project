@@ -1,6 +1,6 @@
 .cats-nav {
     width : 100%;
-    background-image : url("cat13");
+    background-color: rgba(0, 0, 0, 0.521);
     background-position: center;
     color : whitesmoke;
     position: fixed;
