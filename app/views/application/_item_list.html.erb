@@ -4,13 +4,12 @@
         <%= image_tag(item.picture) if item.picture.attached?  %>
         <div id="photo<%= item.id %>" class="collapse buying-div">
                 <%= form_with url: carts_path(item.id), method: :post do |form| %>
-                    <%= form.label "quantity" %>
                     <%= form.hidden_field :item_id, value: item.id %>
-                    <%= form.number_field :quantity, value: 1, in: 1.0..1000.0, step: 1,class: "form-control transparent"%><br>
+                    <%= form.hidden_field :quantity, value: 1 %><br>
                     <%= form.submit "Ajouter au Panier", class: "btn btn-sm btn-outline-warning" %>
                 <% end %>
                 <br>
-                <%= link_to "Acheter cet article", "/payment/new",class: "btn btn-sm btn-outline-warning" %>
+                <%= link_to "Acheter cet article", item_orders_path(item.id), method: :post, class: "btn btn-sm btn-outline-warning" %>
         </div>
     </div>
     <% end %>

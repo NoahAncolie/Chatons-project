@@ -30,6 +30,7 @@
 }
 
 .item-list {
+    margin-top : calc(15vh + 5px);
     display : flex;
     flex-wrap : wrap;
 }
@@ -54,7 +55,6 @@
 .item-image img{
     display : block;
     height : 250px;
-    width : 100%;
 }
 
 .buying-div {
@@ -74,8 +74,4 @@
 .transparent {
     background-color : transparent;
     color : whitesmoke;
-}
-
-svg {
-    width : 40px;
 }

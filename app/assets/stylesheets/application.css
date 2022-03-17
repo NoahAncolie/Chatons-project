@@ -13,26 +13,6 @@
  *= require cart
  *= require form-friendly
  *= require items
+ *= require landing
+ *= require nav
  */
-
-body {
-  color: rgba(0, 0, 0,);
-  text-align: center;
-  font-family: 'Poppins', sans-serif;
-  background-image: url("https://p4.wallpaperbetter.com/wallpaper/133/340/1014/animals-cats-cute-wallpaper-preview.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  height: 100vh;
-}
-.carousel-item {
-
-  margin-top: 100px;
-  
-
-}
-.d-block{
-
-  border-radius: 150px;
-}

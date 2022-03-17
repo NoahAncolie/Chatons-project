@@ -36,7 +36,7 @@ class CartsController < ApplicationController
   private
 
   def find_price
-    return Item.find(params[:item_id].to_i).price * params[:quantity].to_i
+    return Item.find(params[:item_id].to_i).price
   end
 
   def permit_params
@@ -50,4 +50,11 @@ class CartsController < ApplicationController
       redirect_to user_session_path
     end
   end
+
+  def permit_params
+    params[:price] = find_price
+    params[:user_id] = current_user.id
+    params.permit(:item_id, :user_id, :quantity, :price)
+  end
+
 end
