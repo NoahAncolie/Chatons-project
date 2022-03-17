@@ -9,13 +9,15 @@ class CartsController < ApplicationController
   def create
     :authenticate_user
     @cart_item = CartItem.new(permit_params)
-    if @cart_item.save
-      respond_to do |format|
-        format.js { }
+    unless (already_in_cart(@cart_item))
+      if @cart_item.save
+        respond_to do |format|
+          format.js { }
+        end
+      else 
+        flash.now[:error] = puts @cart_item.errors.messages
+        render 'chat'
       end
-    else 
-      flash.now[:error] = puts @cart_item.errors.messages
-      render 'chat'
     end
   end
 

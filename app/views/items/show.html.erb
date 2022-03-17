@@ -5,7 +5,9 @@
         <% item = Item.find(params[:id].to_i) %>
         <%= image_tag(item.picture) if item.picture.attached?  %>
         <h2><%= item.name %><b class="text-warning">.</b> <small class="text-muted">$<%= item.price %></small></h2>
-        <%= form_tag charges_path do %>
+        <%= form_with url: charges_path, method: :post do |f|%>
+            <%= f.hidden_field :from_cart, value: false %>
+            <%= f.hidden_field :item_id, value: item.id %>
             <article>
                 <% if flash[:error].present? %>
                     <div id="error_explanation">
@@ -14,10 +16,11 @@
                 <% end %>
             </article>
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                    data-key="<%%= Rails.configuration.stripe[:publishable_key] %>"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                     data-description="Informations"
                     data-amount="<%= item.price * 100 %>"
-                    data-locale="auto"></script>
+                    data-locale="auto">
+                    </script>
         <% end %>
     </div>
 </div>

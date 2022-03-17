@@ -11,7 +11,8 @@
                 </div>
             <% end %>
         </div>
-        <%= form_tag charges_path do %>
+        <%= form_with url: charges_path, method: :post do |f|%>
+            <%= f.hidden_field :from_cart, value: true %>
             <article>
                 <% if flash[:error].present? %>
                     <div id="error_explanation">
@@ -20,10 +21,10 @@
                 <% end %>
             </article>
             <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                     data-description="Informations"
                     data-amount="<%= cart_total * 100 %>"
-                    data-locale="auto">
-            </script>
+                    data-locale="auto"></script>
         <% end %>
     </div>
 </div>

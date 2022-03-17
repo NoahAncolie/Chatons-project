@@ -16,4 +16,23 @@ module CartsHelper
         end
         return @price
     end
+
+    def already_in_cart(new_cart_item)
+        @cart_items = current_cart
+        @cart_items.each do |item|
+            if item.item_id == new_cart_item.item_id
+                return true
+            end
+        end
+        return false
+    end
+
+    def destroy_cart
+        @cart_items = CartItem.all
+        @cart_items.each do |item|
+            if item.user_id == current_user.id
+                item.destroy
+            end
+        end
+    end
 end
