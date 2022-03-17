@@ -9,7 +9,9 @@ class CartsController < ApplicationController
     :authenticate_user
     @cart_item = CartItem.new(permit_params)
     if @cart_item.save
-      redirect_to '/'
+      respond_to do |format|
+        format.js { }
+      end
     else 
       flash.now[:error] = puts @cart_item.errors.messages
       render 'chat'
@@ -31,7 +33,11 @@ class CartsController < ApplicationController
   end
 
   def destroy
-    
+    CartItem.find(params[:id].to_i).destroy
+    respond_to do |format|
+      format.html { redirect_to 'chat' }
+      format.js { }
+    end
   end
   private
 

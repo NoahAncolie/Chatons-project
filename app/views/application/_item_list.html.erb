@@ -3,7 +3,7 @@
     <div class="item-image hoverable">
         <%= image_tag(item.picture) if item.picture.attached?  %>
         <div id="photo<%= item.id %>" class="collapse buying-div">
-                <%= form_with url: carts_path(item.id), method: :post do |form| %>
+                <%= form_with url: carts_path(item.id), method: :post, remote: true do |form| %>
                     <%= form.hidden_field :item_id, value: item.id %>
                     <%= form.hidden_field :quantity, value: 1 %><br>
                     <%= form.submit "Panier", class: "btn btn-sm btn-outline-warning" %>
@@ -30,4 +30,10 @@
             document.getElementsByClassName("buying-div")[i].classList.toggle("darken")
         })
     }
+
+    document.getElementsByTagName("body")[0].addEventListener("click", function(){
+        if (document.getElementById("cart")) {
+            document.getElementById("cart").remove()
+        }
+    })
 </script>
