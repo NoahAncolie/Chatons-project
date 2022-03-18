@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.4'
 
 #CUSTON-GEMS
+gem 'uri'
 gem 'stripe'
 gem 'devise'
 gem "dotenv-rails"
