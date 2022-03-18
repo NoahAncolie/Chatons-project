@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-10.times do 
+100.times do 
     13.times do |i|
         item = Item.new
-        item.picture.attach(io: File.open(File.join("cat#{i+ 1}.jpg"), filename: 'chat.jpg')
+        item.picture.attach(io: File.open("https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg"), filename: 'chat.jpg')
         item.name = "Photo de chat"
         item.price = 100
         item.save
