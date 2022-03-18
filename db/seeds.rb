@@ -8,7 +8,7 @@
 10.times do 
     13.times do |i|
         item = Item.new
-        item.picture.attach(io: File.open(File.join(Rails.root,"app/assets/images/cat#{i+ 1}.jpg")), filename: 'chat.jpg')
+        item.picture.attach(io: File.open(File.join("cat#{i+ 1}.jpg"), filename: 'chat.jpg')
         item.name = "Photo de chat"
         item.price = 100
         item.save
