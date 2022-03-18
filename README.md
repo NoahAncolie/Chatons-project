@@ -1,6 +1,6 @@
 ## Projet E Commerce
 
-Projet de vente
+Projet de vente de photos de chats
 
 ## Auteurs
 
@@ -9,3 +9,7 @@ Projet de vente
 - Larbi
 - Sami
 - Matthieu
+
+## Site mis en ligne
+
+sur --> https://chats-a-vendre.herokuapp.com/chat
